@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>秋季（第一年）回體料理清單｜依取得容易度 × 回復量排序</title>
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#12141b; --muted:#9aa4b2; --text:#e7eaf0; --line:#23283a;
+      --good:#22c55e; --mid:#f59e0b; --hard:#ef4444; --chip:#1b2030;
+      --radius:14px;
+    }
+    body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);}
+    header{padding:20px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0b0c10,#0b0c10 40%,#0a0b10);}
+    h1{font-size:18px;margin:0 0 6px 0;}
+    .sub{color:var(--muted);font-size:13px;line-height:1.5;}
+    .wrap{max-width:1100px;margin:0 auto;}
+    .panel{padding:14px 16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line);background:rgba(255,255,255,0.02)}
+    .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-size:13px;color:var(--text);display:flex;gap:8px;align-items:center}
+    .chip input,.chip select{background:transparent;border:none;color:var(--text);outline:none;font-size:13px}
+    .chip input{width:200px}
+    .btn{cursor:pointer}
+    .legend{color:var(--muted);font-size:12px;margin-left:auto}
+    main{padding:14px 16px;}
+    .status{color:var(--muted);font-size:13px;margin:0 0 10px 0}
+    table{width:100%;border-collapse:separate;border-spacing:0 10px;}
+    th{color:var(--muted);font-weight:600;font-size:12px;text-align:left;padding:0 10px;}
+    td{background:var(--card);border:1px solid var(--line);padding:10px;border-left:none;border-right:none;}
+    tr td:first-child{border-left:1px solid var(--line);border-top-left-radius:var(--radius);border-bottom-left-radius:var(--radius);}
+    tr td:last-child{border-right:1px solid var(--line);border-top-right-radius:var(--radius);border-bottom-right-radius:var(--radius);}
+    .name{display:flex;gap:10px;align-items:center}
+    .icon{width:34px;height:34px;border-radius:10px;background:#0f1320;border:1px solid var(--line);object-fit:cover}
+    .small{font-size:12px;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02)}
+    .tag.good{border-color:rgba(34,197,94,.35);color:#bbf7d0}
+    .tag.mid{border-color:rgba(245,158,11,.35);color:#fde68a}
+    .tag.hard{border-color:rgba(239,68,68,.35);color:#fecaca}
+    .mono{font-variant-numeric:tabular-nums}
+    .k{color:var(--muted);font-size:12px}
+    .ing{display:flex;flex-wrap:wrap;gap:6px}
+    .ing .i{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:rgba(255,255,255,0.02);border-radius:999px;padding:4px 8px;font-size:12px}
+    .ing img{width:18px;height:18px;border-radius:6px;border:1px solid var(--line);object-fit:cover}
+    details{background:transparent}
+    details summary{cursor:pointer;color:var(--muted);font-size:12px}
+    .note{color:var(--muted);font-size:12px;line-height:1.6;margin-top:14px}
+    a{color:#93c5fd}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>秋季（第一年）回體料理清單</h1>
+      <div class="sub">
+        來源資料：羊小咩《哆啦A夢牧場物語輔助工具》食譜頁。<br/>
+        這頁會「自動抓取」原網站所有料理，並依你目前情境（第一年秋天）做：取得容易度評分 → 再以回復量排序。
+      </div>
+    </div>
+  </header>
+
+  <div class="panel">
+    <div class="chip">季節：<strong>秋</strong>（第一年）</div>
+    <div class="chip">排序：
+      <select id="sortMode">
+        <option value="ease_then_recover" selected>取得容易 → 回復量</option>
+        <option value="recover_then_ease">回復量 → 取得容易</option>
+      </select>
+    </div>
+    <div class="chip">搜尋料理：<input id="q" placeholder="例如：燉、濃湯、蛋、沙拉…" /></div>
+    <div class="chip btn" id="reload">重新載入</div>
+    <div class="legend">
+      取得容易度：<span class="tag good">容易</span> <span class="tag mid">普通</span> <span class="tag hard">偏難</span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <p class="status" id="status">載入中…</p>
+
+    <table id="tbl" aria-label="recipes">
+      <thead>
+        <tr>
+          <th style="width:30%">料理</th>
+          <th style="width:10%">工具</th>
+          <th style="width:10%">回復量</th>
+          <th style="width:15%">取得容易度</th>
+          <th style="width:35%">材料（秋季易取得替代）</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <details>
+      <summary>我怎麼判定「秋季易取得」？（點我看規則）</summary>
+      <div class="note">
+        <ul>
+          <li>若材料標示為「(秋)」或「(四季)」→ 視為<strong>容易</strong>。</li>
+          <li>若材料標示為「(春)/(夏)/(冬)」→ 視為<strong>普通</strong>（你若有囤貨仍可做，但不是當季最省心）。</li>
+          <li>「@ 類別材料」會替你換成秋季常見代表（例如：@葉菜類→菠菜、@薯類→地瓜）。</li>
+          <li>雞蛋、牛奶、麵粉、油、奶油、起司等「常備品」→ 視為<strong>容易</strong>（你已經有廚具，多半也會走畜牧/商店補給線）。</li>
+        </ul>
+        代表作物（秋季）參考：地瓜、菠菜、牛蒡等秋季作物清單。<a href="https://doraemon.game.lamb-mei.com/items/plants" target="_blank" rel="noreferrer">（來源）</a>
+      </div>
+    </details>
+
+    <div class="note">
+      若你在手機上開這份 HTML，第一次載入會去抓原網站資料；若網路不穩，請按「重新載入」。<br/>
+      若遇到跨網域（CORS）限制，請把這份檔案放到 GitHub Pages / 任一網站空間再開啟（同樣可用）。
+    </div>
+  </main>
+
+<script>
+(() => {
+  const SOURCE_URL = "https://doraemon.game.lamb-mei.com/recipe";
+  const seasonNow = "秋";
+
+  // 秋季最容易取得的「代表食材」（用於 @ 類別替代）
+  // 參考：作物清單中秋季作物如 地瓜(秋) / 菠菜(秋) / 牛蒡(秋) 等
+  // https://doraemon.game.lamb-mei.com/items/plants
+  const categoryPick = {
+    "@葉菜類": "菠菜(秋)",
+    "@薯類": "地瓜(秋)",
+    "@蘿蔔類": "牛蒡(秋)",
+    "@圓果類": "茄子(秋)",
+    "@野菜類": "栗子(秋)",      // 秋季野外常見代表（也可改成你常撿到的）
+    "@菇類": "香菇(秋)",        // 若你在遊戲中秋季常撿到其他菇，可自行替換
+    "@水果類": "蘋果(秋)",
+    "@蝦類": "蝦(冬)"           // 秋季不一定好拿，仍保留原標示
+  };
+
+  // 常備材料（視為容易）
+  const pantry = new Set(["雞蛋","牛奶","麵粉","油","奶油","起司","優格","蜂蜜","紅豆餡","美乃滋","香辛料","麵包"]);
+
+  const recoveryRank = (txt) => {
+    // txt 形如：特大(149)、大(77)、中(56)、小(9) 或 中
+    if (!txt) return {tier:"", val:0};
+    const m = txt.match(/(特大|大|中|小)\s*\(?\s*([0-9]+)?/);
+    if (!m) return {tier:txt.trim(), val:0};
+    const tier = m[1];
+    const val = m[2] ? parseInt(m[2],10) : 0;
+    const tierScore = { "特大": 4, "大": 3, "中": 2, "小": 1 }[tier] ?? 0;
+    return {tier, val, tierScore};
+  };
+
+  const seasonOf = (s) => {
+    const m = s.match(/\((春|夏|秋|冬|四季|全)\)/);
+    return m ? m[1] : null;
+  };
+
+  const easeScoreOfIngredient = (name) => {
+    name = name.trim();
+    if (!name) return 99;
+    if (name.startsWith("@")) {
+      // 類別材料：視為容易（你當季可找替代）
+      return 1;
+    }
+    const base = name.replace(/\(.*?\)/g,"").trim();
+    if (pantry.has(base)) return 1;
+
+    const s = seasonOf(name);
+    if (s === "秋" || s === "四季" || s === "全") return 1;
+    if (s === "春" || s === "夏" || s === "冬") return 2;
+
+    // 無季節標示：通常是加工品/素材，先當普通
+    return 2;
+  };
+
+  const easeLabel = (score) => {
+    if (score <= 1.34) return {txt:"容易", cls:"good"};
+    if (score <= 2.15) return {txt:"普通", cls:"mid"};
+    return {txt:"偏難", cls:"hard"};
+  };
+
+  const normalizeIngredient = (raw) => {
+    const t = raw.trim();
+    if (t.startsWith("@")) {
+      // 替代顯示
+      return `${t} → ${categoryPick[t] ?? "（秋季常見替代）"}`;
+    }
+    return t;
+  };
+
+  async function fetchHtml(url){
+    const r = await fetch(url, {mode:"cors"});
+    if(!r.ok) throw new Error("fetch_failed");
+    return await r.text();
+  }
+
+  function absUrl(base, maybe){
+    try { return new URL(maybe, base).toString(); }
+    catch(e){ return maybe; }
+  }
+
+  function parseRecipes(htmlText){
+    const doc = new DOMParser().parseFromString(htmlText, "text/html");
+
+    // 原站的表格是「一列一列」的呈現，我們用「#名稱 工具 回復量」之後的結構抓取
+    // 這裡採取彈性策略：抓所有表格列（tr），並從每列內的文字欄位推斷。
+    const rows = Array.from(doc.querySelectorAll("table tr"));
+    const out = [];
+
+    for (const tr of rows){
+      const tds = Array.from(tr.querySelectorAll("td"));
+      if (tds.length < 3) continue;
+
+      const name = (tds[0]?.innerText ?? "").trim();
+      const tool = (tds[1]?.innerText ?? "").trim();
+      const recoverTxt = (tds[2]?.innerText ?? "").trim();
+
+      if (!name || name === "#" || name.includes("名稱")) continue;
+
+      // 圖示：取該列第一張 img（若有）
+      let icon = tr.querySelector("img")?.getAttribute("src") || "";
+      icon = icon ? absUrl(SOURCE_URL, icon) : "";
+
+      // 材料：後面欄位
+      const ingredients = tds.slice(4).map(td => (td.innerText || "").trim()).filter(Boolean);
+
+      const rec = recoveryRank(recoverTxt);
+      const easeScores = ingredients.map(easeScoreOfIngredient);
+      const easeAvg = easeScores.length ? (easeScores.reduce((a,b)=>a+b,0)/easeScores.length) : 9;
+      const ease = easeLabel(easeAvg);
+
+      out.push({
+        name, tool, recoverTxt,
+        recTier: rec.tier, recVal: rec.val, recTierScore: rec.tierScore,
+        easeAvg, easeTxt: ease.txt, easeCls: ease.cls,
+        icon,
+        ingredients
+      });
+    }
+    return out;
+  }
+
+  function render(recipes){
+    const tbody = document.querySelector("#tbl tbody");
+    tbody.innerHTML = "";
+
+    for (const r of recipes){
+      const tr = document.createElement("tr");
+
+      const td1 = document.createElement("td");
+      td1.innerHTML = `
+        <div class="name">
+          ${r.icon ? `<img class="icon" src="${r.icon}" alt="">` : `<div class="icon"></div>`}
+          <div>
+            <div><strong>${escapeHtml(r.name)}</strong></div>
+            <div class="small">來源：食譜頁</div>
+          </div>
+        </div>`;
+      tr.appendChild(td1);
+
+      const td2 = document.createElement("td");
+      td2.innerHTML = `<span class="mono">${escapeHtml(r.tool || "-")}</span>`;
+      tr.appendChild(td2);
+
+      const td3 = document.createElement("td");
+      td3.innerHTML = `<span class="mono">${escapeHtml(r.recoverTxt || "-")}</span>`;
+      tr.appendChild(td3);
+
+      const td4 = document.createElement("td");
+      td4.innerHTML = `<span class="tag ${r.easeCls}">${r.easeTxt}</span><div class="k mono">score ${r.easeAvg.toFixed(2)}</div>`;
+      tr.appendChild(td4);
+
+      const td5 = document.createElement("td");
+      td5.innerHTML = `
+        <div class="ing">
+          ${r.ingredients.map(x => `<span class="i">${escapeHtml(normalizeIngredient(x))}</span>`).join("") || `<span class="small">（原站未列出材料或你篩到表頭）</span>`}
+        </div>`;
+      tr.appendChild(td5);
+
+      tbody.appendChild(tr);
+    }
+  }
+
+  function escapeHtml(s){
+    return (s ?? "").replace(/[&<>"']/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;" }[m]));
+  }
+
+  function applyFilterAndSort(all){
+    const q = document.getElementById("q").value.trim();
+    const mode = document.getElementById("sortMode").value;
+
+    let items = all.filter(r => r.name && r.recTierScore);
+
+    if (q){
+      const qq = q.toLowerCase();
+      items = items.filter(r =>
+        r.name.toLowerCase().includes(qq) ||
+        r.tool.toLowerCase().includes(qq) ||
+        r.ingredients.join(" ").toLowerCase().includes(qq)
+      );
+    }
+
+    const byEaseThenRecover = (a,b) => {
+      if (a.easeAvg !== b.easeAvg) return a.easeAvg - b.easeAvg;
+      // 先比 tier，再比數字（若有）
+      if (a.recTierScore !== b.recTierScore) return b.recTierScore - a.recTierScore;
+      return (b.recVal||0) - (a.recVal||0);
+    };
+    const byRecoverThenEase = (a,b) => {
+      if (a.recTierScore !== b.recTierScore) return b.recTierScore - a.recTierScore;
+      if ((b.recVal||0) !== (a.recVal||0)) return (b.recVal||0) - (a.recVal||0);
+      return a.easeAvg - b.easeAvg;
+    };
+
+    items.sort(mode === "recover_then_ease" ? byRecoverThenEase : byEaseThenRecover);
+    return items;
+  }
+
+  async function load(){
+    const status = document.getElementById("status");
+    status.textContent = "正在從原網站讀取所有料理…";
+    try{
+      const htmlText = await fetchHtml(SOURCE_URL);
+      const all = parseRecipes(htmlText);
+
+      // 去掉疑似表頭/空列
+      const usable = all.filter(x => x.name && x.recoverTxt && !x.name.includes("名稱"));
+
+      window.__ALL_RECIPES__ = usable;
+
+      status.textContent = `已載入 ${usable.length} 道料理。現在依「取得容易度 → 回復量」排序顯示。`;
+      render(applyFilterAndSort(usable));
+    }catch(e){
+      console.error(e);
+      status.textContent = "載入失敗：可能是網路或跨網域限制。建議把此檔案放到 GitHub Pages 再開啟，或稍後按「重新載入」。";
+    }
+  }
+
+  document.getElementById("q").addEventListener("input", () => {
+    const all = window.__ALL_RECIPES__ || [];
+    render(applyFilterAndSort(all));
+  });
+  document.getElementById("sortMode").addEventListener("change", () => {
+    const all = window.__ALL_RECIPES__ || [];
+    render(applyFilterAndSort(all));
+  });
+  document.getElementById("reload").addEventListener("click", load);
+
+  load();
+})();
+</script>
+</body>
+</html>
