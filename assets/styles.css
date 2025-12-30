@@ -29,3 +29,62 @@ body {
   margin: 0;
   color: #555;
 }
+
+.tabs {
+  margin-top: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(25, 30, 45, 0.08);
+  padding: 20px;
+}
+
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.tabs__tab {
+  border: 1px solid transparent;
+  background: #f1f3f5;
+  color: #333;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabs__tab:hover {
+  background: #e9ecef;
+}
+
+.tabs__tab.is-active {
+  background: #2f6fed;
+  color: #fff;
+  border-color: #2f6fed;
+  box-shadow: 0 8px 18px rgba(47, 111, 237, 0.3);
+}
+
+.tabs__panels {
+  padding-top: 20px;
+}
+
+.tabs__panel {
+  min-height: 180px;
+  display: none;
+}
+
+.tabs__panel.is-active {
+  display: block;
+}
+
+.tab-placeholder {
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 24px;
+  background: #f9fafb;
+  color: #6b7280;
+}
