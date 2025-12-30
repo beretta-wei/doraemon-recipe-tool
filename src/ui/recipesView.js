@@ -5,11 +5,22 @@ const INGREDIENT_FIELDS = [
   ["材料4", "材料 4"],
   ["材料5", "材料 5"],
 ];
+const PRICE_FIELDS = [
+  "⭐️0.5",
+  "⭐️1.0",
+  "⭐️1.5",
+  "⭐️2.0",
+  "⭐️2.5",
+  "⭐️3.0",
+  "⭐️3.5",
+  "⭐️4.0",
+  "⭐️4.5",
+  "⭐️5.0",
+];
 const FIELD_MAP = {
-  name: ["料理名稱", "料理食譜"],
+  name: ["料理食譜"],
   tool: ["使用器具"],
   recovery: ["回復量"],
-  price: ["每星售價", "價格"],
   bonus: ["食譜+"],
 };
 
@@ -48,7 +59,7 @@ const buildIngredientEntries = (recipe) => {
   return items;
 };
 
-const createMetaItem = (label, value) => {
+const createMetaItem = (label, value, { placeholder = "" } = {}) => {
   const wrapper = document.createElement("div");
   wrapper.className = "recipe-card__meta-item";
 
@@ -56,8 +67,47 @@ const createMetaItem = (label, value) => {
   dt.textContent = label;
 
   const dd = document.createElement("dd");
-  dd.textContent = normalizeText(value);
+  const text = normalizeText(value);
+  dd.textContent = text || placeholder;
 
+  wrapper.append(dt, dd);
+  return wrapper;
+};
+
+const buildPriceEntries = (recipe) =>
+  PRICE_FIELDS.map((field) => ({
+    star: field,
+    value: normalizeText(recipe[field]),
+  }));
+
+const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "recipe-card__meta-item";
+
+  const dt = document.createElement("dt");
+  dt.textContent = label;
+
+  const dd = document.createElement("dd");
+  const list = document.createElement("ul");
+  list.className = "recipe-card__prices";
+
+  entries.forEach((entry) => {
+    const item = document.createElement("li");
+    item.className = "recipe-card__price";
+
+    const star = document.createElement("span");
+    star.className = "recipe-card__price-star";
+    star.textContent = entry.star;
+
+    const value = document.createElement("span");
+    value.className = "recipe-card__price-value";
+    value.textContent = entry.value || placeholder;
+
+    item.append(star, value);
+    list.appendChild(item);
+  });
+
+  dd.appendChild(list);
   wrapper.append(dt, dd);
   return wrapper;
 };
@@ -110,8 +160,10 @@ const createRecipeCard = (recipe) => {
   meta.className = "recipe-card__meta";
   meta.append(
     createMetaItem("使用器具", pickFieldValue(recipe, FIELD_MAP.tool)),
-    createMetaItem("回復量", pickFieldValue(recipe, FIELD_MAP.recovery)),
-    createMetaItem("每星售價", pickFieldValue(recipe, FIELD_MAP.price))
+    createMetaItem("回復量", pickFieldValue(recipe, FIELD_MAP.recovery), {
+      placeholder: "—",
+    }),
+    createPriceMetaItem("每星售價", buildPriceEntries(recipe))
   );
 
   card.append(header, ingredientSection, meta);
