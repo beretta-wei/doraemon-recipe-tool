@@ -1,9 +1,15 @@
-const INGREDIENT_FIELDS = ["材料1", "材料2", "材料3", "材料4", "材料5"];
+const INGREDIENT_FIELDS = [
+  ["材料1", "材料 1"],
+  ["材料2", "材料 2"],
+  ["材料3", "材料 3"],
+  ["材料4", "材料 4"],
+  ["材料5", "材料 5"],
+];
 const FIELD_MAP = {
-  name: ["料理名稱"],
+  name: ["料理名稱", "料理食譜"],
   tool: ["使用器具"],
   recovery: ["回復量"],
-  price: ["每星售價"],
+  price: ["每星售價", "價格"],
   bonus: ["食譜+"],
 };
 
@@ -26,8 +32,8 @@ const normalizeText = (value) => {
 const buildIngredientEntries = (recipe) => {
   const items = [];
 
-  INGREDIENT_FIELDS.forEach((key) => {
-    const rawValue = pickFieldValue(recipe, [key]);
+  INGREDIENT_FIELDS.forEach((keys) => {
+    const rawValue = pickFieldValue(recipe, keys);
     const text = normalizeText(rawValue);
     if (text) {
       items.push({ text, isBonus: false });
