@@ -122,6 +122,16 @@ export function renderRecipesView(container, recipes) {
   const list = document.createElement("div");
   list.className = "recipes-view__list";
 
+  if (!Array.isArray(recipes) || recipes.length === 0) {
+    const empty = document.createElement("div");
+    empty.className = "recipes-view__empty";
+    empty.textContent =
+      "目前沒有料理資料可顯示，請確認 recipes 資料檔是否已載入。";
+    wrapper.appendChild(empty);
+    container.appendChild(wrapper);
+    return;
+  }
+
   recipes.forEach((recipe) => {
     list.appendChild(createRecipeCard(recipe));
   });
