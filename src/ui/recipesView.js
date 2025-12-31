@@ -59,6 +59,18 @@ const buildIngredientEntries = (recipe) => {
   return items;
 };
 
+const matchesIngredientFilter = (recipe, keyword) => {
+  const query = normalizeText(keyword);
+  if (!query) {
+    return true;
+  }
+
+  const normalizedQuery = query.toLowerCase();
+  return buildIngredientEntries(recipe).some((entry) =>
+    entry.text.toLowerCase().includes(normalizedQuery)
+  );
+};
+
 const createMetaItem = (label, value, { placeholder = "" } = {}) => {
   const wrapper = document.createElement("div");
   wrapper.className = "recipe-card__meta-item";
@@ -215,10 +227,50 @@ export function renderRecipesView(container, recipes) {
     return;
   }
 
-  recipes.forEach((recipe) => {
-    list.appendChild(createRecipeCard(recipe));
-  });
+  const filter = document.createElement("div");
+  filter.className = "recipes-view__filter";
 
-  wrapper.appendChild(list);
+  const filterLabel = document.createElement("label");
+  filterLabel.className = "recipes-view__filter-label";
+  filterLabel.textContent = "依食材篩選料理";
+  filterLabel.setAttribute("for", "recipes-filter-ingredient");
+
+  const filterInput = document.createElement("input");
+  filterInput.id = "recipes-filter-ingredient";
+  filterInput.className = "recipes-view__filter-input";
+  filterInput.type = "search";
+  filterInput.placeholder = "輸入食材名稱（例如：馬鈴薯）";
+  filterInput.autocomplete = "off";
+
+  filter.append(filterLabel, filterInput);
+
+  const renderList = (filteredRecipes) => {
+    list.innerHTML = "";
+
+    if (filteredRecipes.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "recipes-view__empty";
+      empty.textContent = "沒有符合的料理，請嘗試其他食材。";
+      list.appendChild(empty);
+      return;
+    }
+
+    filteredRecipes.forEach((recipe) => {
+      list.appendChild(createRecipeCard(recipe));
+    });
+  };
+
+  const updateFilter = () => {
+    const keyword = filterInput.value;
+    const filteredRecipes = recipes.filter((recipe) =>
+      matchesIngredientFilter(recipe, keyword)
+    );
+    renderList(filteredRecipes);
+  };
+
+  filterInput.addEventListener("input", updateFilter);
+  renderList(recipes);
+
+  wrapper.append(filter, list);
   container.appendChild(wrapper);
 }
