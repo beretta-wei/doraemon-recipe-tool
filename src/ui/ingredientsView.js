@@ -21,7 +21,7 @@ const createTagList = (items) => {
   return list;
 };
 
-const createDetailRow = (label, contentNode) => {
+const createDetailRow = (label, contentNode, { interactive = false, onClick } = {}) => {
   const wrapper = document.createElement("div");
   wrapper.className = "ingredient-card__row";
 
@@ -35,6 +35,24 @@ const createDetailRow = (label, contentNode) => {
 
   wrapper.appendChild(title);
   wrapper.appendChild(value);
+
+  if (interactive) {
+    wrapper.classList.add("ingredient-card__row--interactive");
+    wrapper.tabIndex = 0;
+    wrapper.setAttribute("role", "button");
+    wrapper.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLInputElement) {
+        return;
+      }
+      onClick?.();
+    });
+    wrapper.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onClick?.();
+      }
+    });
+  }
   return wrapper;
 };
 
@@ -55,7 +73,7 @@ const createOwnedToggle = (item) => {
   label.appendChild(checkbox);
   label.appendChild(text);
 
-  return label;
+  return { element: label, checkbox };
 };
 
 export function renderIngredientsView(container, ingredients, category) {
@@ -105,8 +123,15 @@ export function renderIngredientsView(container, ingredients, category) {
     card.appendChild(
       createDetailRow("取得位置", createTagList(item.obtainLocation))
     );
+    const ownedToggle = createOwnedToggle(item);
     card.appendChild(
-      createDetailRow("我擁有", createOwnedToggle(item))
+      createDetailRow("我擁有", ownedToggle.element, {
+        interactive: true,
+        onClick: () => {
+          ownedToggle.checkbox.checked = !ownedToggle.checkbox.checked;
+          ownedState.set(item.name, ownedToggle.checkbox.checked);
+        },
+      })
     );
 
     list.appendChild(card);
