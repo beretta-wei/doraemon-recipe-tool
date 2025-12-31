@@ -5,6 +5,7 @@ import { renderAppShell } from "./ui/appShell.js";
 import { renderIngredientsView } from "./ui/ingredientsView.js";
 import { renderTabsNavigation } from "./ui/navigation.js";
 import { renderRecipesView } from "./ui/recipesView.js";
+import ownedState from "./state/ownedState.js";
 
 const root = document.getElementById("app");
 
@@ -24,6 +25,7 @@ const getPageContext = () => {
 };
 
 if (root) {
+  ownedState.load();
   renderAppShell(root);
 
   const tabsList = root.querySelector("[data-tabs-list]");
@@ -41,7 +43,7 @@ if (root) {
     if (page.type === "category") {
       renderIngredientsView(panel, ingredients, page.category);
     } else {
-      renderRecipesView(panel, recipes, ingredients);
+      renderRecipesView(panel, recipes);
     }
   }
 
