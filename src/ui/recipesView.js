@@ -40,6 +40,32 @@ const normalizeText = (value) => {
   return String(value).trim();
 };
 
+const buildOwnedIngredientSet = (ingredients) => {
+  if (!Array.isArray(ingredients)) {
+    return new Set();
+  }
+
+  return new Set(
+    ingredients
+      .filter((item) => item && item.owned)
+      .map((item) => normalizeText(item.name).toLowerCase())
+      .filter(Boolean)
+  );
+};
+
+const buildRequiredIngredients = (recipe) =>
+  INGREDIENT_FIELDS.map((keys) => normalizeText(pickFieldValue(recipe, keys)))
+    .filter(Boolean);
+
+const buildMissingCount = (recipe, ownedSet) => {
+  const requiredIngredients = buildRequiredIngredients(recipe);
+  const requiredCount = requiredIngredients.length;
+  const ownedCount = requiredIngredients.filter((name) =>
+    ownedSet.has(name.toLowerCase())
+  ).length;
+  return requiredCount - ownedCount;
+};
+
 const buildIngredientEntries = (recipe) => {
   const items = [];
 
@@ -208,9 +234,10 @@ const createRecipeCard = (recipe) => {
   return card;
 };
 
-export function renderRecipesView(container, recipes) {
+export function renderRecipesView(container, recipes, ingredients) {
   container.innerHTML = "";
 
+  const ownedIngredientSet = buildOwnedIngredientSet(ingredients);
   const wrapper = document.createElement("div");
   wrapper.className = "recipes-view";
 
@@ -242,7 +269,33 @@ export function renderRecipesView(container, recipes) {
   filterInput.placeholder = "輸入食材名稱（例如：馬鈴薯）";
   filterInput.autocomplete = "off";
 
-  filter.append(filterLabel, filterInput);
+  const missingFilterLabel = document.createElement("label");
+  missingFilterLabel.className = "recipes-view__filter-label";
+  missingFilterLabel.textContent = "依缺少材料篩選";
+  missingFilterLabel.setAttribute("for", "recipes-filter-missing");
+
+  const missingFilterSelect = document.createElement("select");
+  missingFilterSelect.id = "recipes-filter-missing";
+  missingFilterSelect.className = "recipes-view__filter-input";
+
+  [
+    { label: "全部料理", value: "all" },
+    { label: "缺 0 樣材料", value: "0" },
+    { label: "缺 1 樣材料", value: "1" },
+    { label: "缺 2 樣材料", value: "2" },
+  ].forEach((option) => {
+    const item = document.createElement("option");
+    item.value = option.value;
+    item.textContent = option.label;
+    missingFilterSelect.appendChild(item);
+  });
+
+  filter.append(
+    filterLabel,
+    filterInput,
+    missingFilterLabel,
+    missingFilterSelect
+  );
 
   const renderList = (filteredRecipes) => {
     list.innerHTML = "";
@@ -262,13 +315,24 @@ export function renderRecipesView(container, recipes) {
 
   const updateFilter = () => {
     const keyword = filterInput.value;
-    const filteredRecipes = recipes.filter((recipe) =>
-      matchesIngredientFilter(recipe, keyword)
-    );
+    const missingValue = missingFilterSelect.value;
+    const filteredRecipes = recipes.filter((recipe) => {
+      if (!matchesIngredientFilter(recipe, keyword)) {
+        return false;
+      }
+
+      if (missingValue === "all") {
+        return true;
+      }
+
+      const missingCount = buildMissingCount(recipe, ownedIngredientSet);
+      return missingCount === Number(missingValue);
+    });
     renderList(filteredRecipes);
   };
 
   filterInput.addEventListener("input", updateFilter);
+  missingFilterSelect.addEventListener("change", updateFilter);
   renderList(recipes);
 
   wrapper.append(filter, list);

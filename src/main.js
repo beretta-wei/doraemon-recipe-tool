@@ -41,7 +41,7 @@ if (root) {
     if (page.type === "category") {
       renderIngredientsView(panel, ingredients, page.category);
     } else {
-      renderRecipesView(panel, recipes);
+      renderRecipesView(panel, recipes, ingredients);
     }
   }
 
