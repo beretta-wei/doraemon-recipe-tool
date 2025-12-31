@@ -36,6 +36,26 @@ const createDetailRow = (label, contentNode) => {
   return wrapper;
 };
 
+const createOwnedToggle = (item) => {
+  const label = document.createElement("label");
+  label.className = "ingredient-card__owned";
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = Boolean(item.owned);
+  checkbox.addEventListener("change", () => {
+    item.owned = checkbox.checked;
+  });
+
+  const text = document.createElement("span");
+  text.textContent = "已擁有";
+
+  label.appendChild(checkbox);
+  label.appendChild(text);
+
+  return label;
+};
+
 export function renderIngredientsView(container, ingredients, category) {
   container.innerHTML = "";
 
@@ -82,6 +102,9 @@ export function renderIngredientsView(container, ingredients, category) {
     );
     card.appendChild(
       createDetailRow("取得位置", createTagList(item.obtainLocation))
+    );
+    card.appendChild(
+      createDetailRow("我擁有", createOwnedToggle(item))
     );
 
     list.appendChild(card);

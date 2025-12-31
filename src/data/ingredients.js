@@ -18,6 +18,7 @@ export const ingredients = ingredientsSource.map((item, index) => ({
   seasons: splitMultiValue(item.seasons),
   obtainMethod: splitMultiValue(item.obtainMethod),
   obtainLocation: splitMultiValue(item.obtainLocation),
+  owned: item.owned ?? false,
 }));
 
 export default ingredients;
