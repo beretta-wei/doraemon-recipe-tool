@@ -115,67 +115,39 @@ const buildPriceEntries = (recipe) =>
     value: normalizeText(recipe[field]),
   }));
 
-const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
+const createPriceMetaItem = (label, onOpen) => {
   const wrapper = document.createElement("div");
-  wrapper.className = "recipe-card__meta-item recipe-card__meta-item--collapsible";
+  wrapper.className = "recipe-card__meta-item recipe-card__meta-item--drawer";
 
   const dt = document.createElement("dt");
   const toggleButton = document.createElement("button");
   toggleButton.type = "button";
-  toggleButton.className = "recipe-card__toggle";
-  toggleButton.setAttribute("aria-expanded", "false");
+  toggleButton.className = "recipe-card__drawer-toggle";
+  toggleButton.setAttribute("aria-haspopup", "dialog");
 
   const labelText = document.createElement("span");
-  labelText.className = "recipe-card__toggle-label";
+  labelText.className = "recipe-card__drawer-label";
   labelText.textContent = label;
 
-  const hintText = document.createElement("span");
-  hintText.className = "recipe-card__toggle-hint";
-  hintText.textContent = "點擊查看";
-
   const icon = document.createElement("span");
-  icon.className = "recipe-card__toggle-icon";
+  icon.className = "recipe-card__drawer-icon";
   icon.textContent = "▸";
 
-  toggleButton.append(labelText, hintText, icon);
+  toggleButton.append(labelText, icon);
   dt.appendChild(toggleButton);
 
   const dd = document.createElement("dd");
-  const scrollHint = document.createElement("p");
-  scrollHint.className = "recipe-card__prices-hint";
-  scrollHint.textContent = "↔︎ 左右滑動查看";
-  const list = document.createElement("ul");
-  list.className = "recipe-card__prices";
+  dd.className = "recipe-card__drawer-placeholder";
+  dd.textContent = "";
 
-  entries.forEach((entry) => {
-    const item = document.createElement("li");
-    item.className = "recipe-card__price";
-
-    const star = document.createElement("span");
-    star.className = "recipe-card__price-star";
-    star.textContent = entry.star;
-
-    const value = document.createElement("span");
-    value.className = "recipe-card__price-value";
-    value.textContent = entry.value || placeholder;
-
-    item.append(star, value);
-    list.appendChild(item);
-  });
-
-  dd.append(scrollHint, list);
   wrapper.append(dt, dd);
 
-  toggleButton.addEventListener("click", () => {
-    const isExpanded = wrapper.classList.toggle("is-expanded");
-    toggleButton.setAttribute("aria-expanded", String(isExpanded));
-    hintText.textContent = isExpanded ? "點擊收合" : "點擊查看";
-  });
+  toggleButton.addEventListener("click", onOpen);
 
   return wrapper;
 };
 
-const createRecipeCard = (recipe) => {
+const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
   const card = document.createElement("article");
   card.className = "recipe-card";
 
@@ -226,7 +198,7 @@ const createRecipeCard = (recipe) => {
     createMetaItem("回復量", pickFieldValue(recipe, FIELD_MAP.recovery), {
       placeholder: "—",
     }),
-    createPriceMetaItem("每星售價", buildPriceEntries(recipe))
+    createPriceMetaItem("每星售價", () => onOpenPriceDrawer(recipe))
   );
 
   card.append(header, ingredientSection, meta);
@@ -243,6 +215,82 @@ export function renderRecipesView(container, recipes) {
 
   const list = document.createElement("div");
   list.className = "recipes-view__list";
+
+  const priceDrawerOverlay = document.createElement("div");
+  priceDrawerOverlay.className = "recipes-view__drawer-overlay";
+  priceDrawerOverlay.setAttribute("aria-hidden", "true");
+
+  const priceDrawer = document.createElement("aside");
+  priceDrawer.className = "recipes-view__drawer";
+  priceDrawer.setAttribute("role", "dialog");
+  priceDrawer.setAttribute("aria-modal", "true");
+  priceDrawer.setAttribute("aria-hidden", "true");
+
+  const priceDrawerPanel = document.createElement("div");
+  priceDrawerPanel.className = "recipes-view__drawer-panel";
+
+  const priceDrawerHeader = document.createElement("div");
+  priceDrawerHeader.className = "recipes-view__drawer-header";
+
+  const priceDrawerTitle = document.createElement("h3");
+  priceDrawerTitle.className = "recipes-view__drawer-title";
+
+  const priceDrawerClose = document.createElement("button");
+  priceDrawerClose.type = "button";
+  priceDrawerClose.className = "recipes-view__drawer-close";
+  priceDrawerClose.textContent = "關閉";
+
+  priceDrawerHeader.append(priceDrawerTitle, priceDrawerClose);
+
+  const priceDrawerList = document.createElement("ul");
+  priceDrawerList.className = "recipes-view__drawer-list";
+
+  priceDrawerPanel.append(priceDrawerHeader, priceDrawerList);
+  priceDrawer.appendChild(priceDrawerPanel);
+
+  const closePriceDrawer = () => {
+    priceDrawerOverlay.classList.remove("is-visible");
+    priceDrawer.classList.remove("is-visible");
+    priceDrawerOverlay.setAttribute("aria-hidden", "true");
+    priceDrawer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-drawer-open");
+  };
+
+  const openPriceDrawer = (recipe) => {
+    priceDrawerTitle.textContent = normalizeText(
+      pickFieldValue(recipe, FIELD_MAP.name)
+    );
+    priceDrawerList.innerHTML = "";
+    buildPriceEntries(recipe).forEach((entry) => {
+      const item = document.createElement("li");
+      item.className = "recipes-view__drawer-item";
+
+      const star = document.createElement("span");
+      star.className = "recipes-view__drawer-star";
+      star.textContent = entry.star;
+
+      const value = document.createElement("span");
+      value.className = "recipes-view__drawer-value";
+      value.textContent = entry.value || "—";
+
+      item.append(star, value);
+      priceDrawerList.appendChild(item);
+    });
+
+    priceDrawerOverlay.classList.add("is-visible");
+    priceDrawer.classList.add("is-visible");
+    priceDrawerOverlay.setAttribute("aria-hidden", "false");
+    priceDrawer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-drawer-open");
+  };
+
+  priceDrawerOverlay.addEventListener("click", closePriceDrawer);
+  priceDrawerClose.addEventListener("click", closePriceDrawer);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePriceDrawer();
+    }
+  });
 
   if (!Array.isArray(recipes) || recipes.length === 0) {
     const empty = document.createElement("div");
@@ -309,7 +357,9 @@ export function renderRecipesView(container, recipes) {
     }
 
     filteredRecipes.forEach((recipe) => {
-      list.appendChild(createRecipeCard(recipe));
+      list.appendChild(
+        createRecipeCard(recipe, { onOpenPriceDrawer: openPriceDrawer })
+      );
     });
   };
 
@@ -335,6 +385,6 @@ export function renderRecipesView(container, recipes) {
   missingFilterSelect.addEventListener("change", updateFilter);
   renderList(recipes);
 
-  wrapper.append(filter, list);
+  wrapper.append(filter, list, priceDrawerOverlay, priceDrawer);
   container.appendChild(wrapper);
 }
