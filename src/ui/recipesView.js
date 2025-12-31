@@ -1,3 +1,5 @@
+import ownedState from "../state/ownedState.js";
+
 const INGREDIENT_FIELDS = [
   ["材料1", "材料 1"],
   ["材料2", "材料 2"],
@@ -40,18 +42,13 @@ const normalizeText = (value) => {
   return String(value).trim();
 };
 
-const buildOwnedIngredientSet = (ingredients) => {
-  if (!Array.isArray(ingredients)) {
-    return new Set();
-  }
-
-  return new Set(
-    ingredients
-      .filter((item) => item && item.owned)
-      .map((item) => normalizeText(item.name).toLowerCase())
+const buildOwnedIngredientSet = () =>
+  new Set(
+    ownedState
+      .getAllOwned()
+      .map((name) => normalizeText(name).toLowerCase())
       .filter(Boolean)
   );
-};
 
 const buildRequiredIngredients = (recipe) =>
   INGREDIENT_FIELDS.map((keys) => normalizeText(pickFieldValue(recipe, keys)))
@@ -234,10 +231,10 @@ const createRecipeCard = (recipe) => {
   return card;
 };
 
-export function renderRecipesView(container, recipes, ingredients) {
+export function renderRecipesView(container, recipes) {
   container.innerHTML = "";
 
-  const ownedIngredientSet = buildOwnedIngredientSet(ingredients);
+  const ownedIngredientSet = buildOwnedIngredientSet();
   const wrapper = document.createElement("div");
   wrapper.className = "recipes-view";
 

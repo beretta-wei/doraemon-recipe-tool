@@ -1,3 +1,5 @@
+import ownedState from "../state/ownedState.js";
+
 const createTagList = (items) => {
   if (!items || items.length === 0) {
     const empty = document.createElement("span");
@@ -42,9 +44,9 @@ const createOwnedToggle = (item) => {
 
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
-  checkbox.checked = Boolean(item.owned);
+  checkbox.checked = ownedState.get(item.name);
   checkbox.addEventListener("change", () => {
-    item.owned = checkbox.checked;
+    ownedState.set(item.name, checkbox.checked);
   });
 
   const text = document.createElement("span");
