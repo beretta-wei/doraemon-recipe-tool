@@ -6,6 +6,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "麵粉",
@@ -14,6 +15,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "購買、麵粉機",
     obtainLocation: "餐廳、牧場",
+    owned: false,
   },
   {
     name: "麵包",
@@ -22,6 +24,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鳳梨",
@@ -30,6 +33,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鱸魚",
@@ -38,6 +42,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鱧魚",
@@ -46,6 +51,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鱉",
@@ -54,6 +60,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鰹魚",
@@ -62,6 +69,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鰤魚",
@@ -70,6 +78,7 @@ export const ingredientsSource = [
     seasons: "冬",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鯛魚",
@@ -78,6 +87,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鯖魚",
@@ -86,6 +96,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鯉魚",
@@ -94,6 +105,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鮭魚",
@@ -102,6 +114,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "鮪魚",
@@ -110,6 +123,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "高麗菜",
@@ -118,6 +132,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "馬鈴薯",
@@ -126,6 +141,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "香魚",
@@ -134,6 +150,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "香辛料",
@@ -142,6 +159,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "香菇",
@@ -150,6 +168,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林、隙光道路",
+    owned: false,
   },
   {
     name: "食人魚",
@@ -158,6 +177,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "青椒",
@@ -166,6 +186,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "雞蛋",
@@ -174,6 +195,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "雞",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "辛香料",
@@ -182,6 +204,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "起司",
@@ -190,6 +213,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "豌豆",
@@ -198,6 +222,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "西瓜",
@@ -206,6 +231,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "西太公魚",
@@ -214,6 +240,7 @@ export const ingredientsSource = [
     seasons: "冬",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "褐帶石斑魚",
@@ -222,6 +249,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蠑螺",
@@ -230,6 +258,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "螃蟹",
@@ -238,6 +267,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蝦",
@@ -246,6 +276,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蜜柑",
@@ -254,6 +285,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蜂蜜",
@@ -262,6 +294,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蛤蜊",
@@ -270,6 +303,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "虹鱒",
@@ -278,6 +312,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蘋果醬",
@@ -286,6 +321,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蘋果",
@@ -294,6 +330,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蘆薈",
@@ -302,6 +339,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "採集",
     obtainLocation: "陽光海灘、酥酥海灘",
+    owned: false,
   },
   {
     name: "藍莓",
@@ -310,6 +348,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林",
+    owned: false,
   },
   {
     name: "薑",
@@ -318,6 +357,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "採集",
     obtainLocation: "抖抖山、嘶嘶山路",
+    owned: false,
   },
   {
     name: "蕪菁",
@@ -326,6 +366,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "蔔萄",
@@ -334,6 +375,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "葡萄醬",
@@ -342,6 +384,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "菠菜",
@@ -350,6 +393,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "草莓",
@@ -358,6 +402,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "茄子",
@@ -366,6 +411,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "花蛤",
@@ -374,6 +420,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "花椰菜",
@@ -382,6 +429,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "艾草",
@@ -390,6 +438,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "抖抖山",
+    owned: false,
   },
   {
     name: "舞菇",
@@ -398,6 +447,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "牧場、同歡河、雨霧森林、抖抖山、鳥語森林",
+    owned: false,
   },
   {
     name: "胡蘿蔔",
@@ -406,6 +456,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "胡桃",
@@ -414,6 +465,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林",
+    owned: false,
   },
   {
     name: "義大利麵",
@@ -422,6 +474,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "美乃滋",
@@ -430,6 +483,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "紫萁",
@@ -438,6 +492,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "抖抖山",
+    owned: false,
   },
   {
     name: "紅龍蝦",
@@ -446,6 +501,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "紅豆餡",
@@ -454,6 +510,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "筍子",
@@ -462,6 +519,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林",
+    owned: false,
   },
   {
     name: "竹筴魚",
@@ -470,6 +528,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "章魚",
@@ -478,6 +537,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "秋刀魚",
@@ -486,6 +546,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "皺鰓鯊",
@@ -494,6 +555,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "皇帶魚",
@@ -502,6 +564,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "白蘿蔔",
@@ -510,6 +573,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "白菜",
@@ -518,6 +582,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "白花椰菜",
@@ -526,6 +591,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "白帶魚",
@@ -534,6 +600,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "番茄醬",
@@ -542,6 +609,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "番茄",
@@ -550,6 +618,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "甜椒",
@@ -558,6 +627,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "玉米",
@@ -566,6 +636,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "牛蒡",
@@ -574,6 +645,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "牛奶",
@@ -582,6 +654,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "擠牛",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "燈籠魚",
@@ -590,6 +663,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "烏賊",
@@ -598,6 +672,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "滑菇",
@@ -606,6 +681,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "牧場、同歡河、雨霧森林、隙光道路、抖抖山、鳥語森林",
+    owned: false,
   },
   {
     name: "淡菜",
@@ -614,6 +690,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "海帶",
@@ -622,6 +699,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "海天使",
@@ -630,6 +708,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "洋蔥",
@@ -638,6 +717,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "泥鰍",
@@ -646,6 +726,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "油",
@@ -654,6 +735,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "購買",
     obtainLocation: "餐廳",
+    owned: false,
   },
   {
     name: "河豚",
@@ -662,6 +744,7 @@ export const ingredientsSource = [
     seasons: "冬",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "沙腸仔",
@@ -670,6 +753,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "沙丁魚",
@@ -678,6 +762,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "比目魚",
@@ -686,6 +771,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "櫻桃",
@@ -694,6 +780,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "檸檬",
@@ -702,6 +789,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "梅子",
@@ -710,6 +798,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "同歡河",
+    owned: false,
   },
   {
     name: "栗子",
@@ -718,6 +807,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "同歡河",
+    owned: false,
   },
   {
     name: "柿子",
@@ -726,6 +816,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "柚子醬",
@@ -734,6 +825,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "烹飪",
     obtainLocation: "廚房",
+    owned: false,
   },
   {
     name: "柚子",
@@ -742,6 +834,7 @@ export const ingredientsSource = [
     seasons: "冬",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林",
+    owned: false,
   },
   {
     name: "枇杷",
@@ -750,6 +843,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "嘶嘶山路",
+    owned: false,
   },
   {
     name: "松露",
@@ -758,6 +852,7 @@ export const ingredientsSource = [
     seasons: "冬",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林、隙光道路、抖抖山",
+    owned: false,
   },
   {
     name: "松茸",
@@ -766,6 +861,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林、隙光道路、抖抖山",
+    owned: false,
   },
   {
     name: "杏子",
@@ -774,6 +870,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林",
+    owned: false,
   },
   {
     name: "杏仁",
@@ -782,6 +879,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "採集",
     obtainLocation: "嘶嘶山路",
+    owned: false,
   },
   {
     name: "木耳",
@@ -790,6 +888,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "採集",
     obtainLocation: "雨霧森林、隙光道路、抖抖山、嘶嘶山路",
+    owned: false,
   },
   {
     name: "星鰻",
@@ -798,6 +897,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "旗魚",
@@ -806,6 +906,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "帝王蟹",
@@ -814,6 +915,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "帆立貝",
@@ -822,6 +924,7 @@ export const ingredientsSource = [
     seasons: "夏、秋、冬",
     obtainMethod: "採集",
     obtainLocation: "老人星號",
+    owned: false,
   },
   {
     name: "巨骨蛇魚",
@@ -830,6 +933,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "巨狗鮨鯉",
@@ -838,6 +942,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "巨大紅點鮭",
@@ -846,6 +951,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "巧克力",
@@ -854,6 +960,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "烹飪",
     obtainLocation: "廚房",
+    owned: false,
   },
   {
     name: "山女鱒",
@@ -862,6 +969,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "小龍蝦",
@@ -870,6 +978,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "小黃瓜",
@@ -878,6 +987,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "奶油",
@@ -886,6 +996,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "烹飪",
     obtainLocation: "廚房",
+    owned: false,
   },
   {
     name: "地瓜",
@@ -894,6 +1005,7 @@ export const ingredientsSource = [
     seasons: "秋",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "土鮒",
@@ -902,6 +1014,7 @@ export const ingredientsSource = [
     seasons: "",
     obtainMethod: "",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "問荊草",
@@ -910,6 +1023,7 @@ export const ingredientsSource = [
     seasons: "春",
     obtainMethod: "採集",
     obtainLocation: "牧場、同歡河、嘶嘶山路、鳥語森林",
+    owned: false,
   },
   {
     name: "哈蜜瓜",
@@ -918,6 +1032,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "可可",
@@ -926,6 +1041,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "南瓜",
@@ -934,6 +1050,7 @@ export const ingredientsSource = [
     seasons: "夏",
     obtainMethod: "種植",
     obtainLocation: "牧場",
+    owned: false,
   },
   {
     name: "剝皮魚",
@@ -942,6 +1059,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "釣魚",
     obtainLocation: "",
+    owned: false,
   },
   {
     name: "優格",
@@ -950,6 +1068,7 @@ export const ingredientsSource = [
     seasons: "春、夏、秋、冬",
     obtainMethod: "購買",
     obtainLocation: "餐廳",
+    owned: false,
   },
 ];
 
