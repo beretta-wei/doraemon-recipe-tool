@@ -141,6 +141,9 @@ const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
   dt.appendChild(toggleButton);
 
   const dd = document.createElement("dd");
+  const scrollHint = document.createElement("p");
+  scrollHint.className = "recipe-card__prices-hint";
+  scrollHint.textContent = "↔︎ 左右滑動查看";
   const list = document.createElement("ul");
   list.className = "recipe-card__prices";
 
@@ -160,7 +163,7 @@ const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
     list.appendChild(item);
   });
 
-  dd.appendChild(list);
+  dd.append(scrollHint, list);
   wrapper.append(dt, dd);
 
   toggleButton.addEventListener("click", () => {
