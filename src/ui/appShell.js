@@ -4,84 +4,13 @@ export function renderAppShell(container) {
       <h1 class="app-shell__title">Doraemon Recipe Tool</h1>
       <p class="app-shell__subtitle">功能將從這裡逐步擴充。</p>
       <div class="tabs" data-tabs>
-        <div class="tabs__list" role="tablist" aria-label="功能頁籤">
-          <button
-            class="tabs__tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-recipes"
-            data-tab-target="recipes"
-            id="tab-recipes"
-          >
-            料理
-          </button>
-          <button
-            class="tabs__tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-crops"
-            data-tab-target="crops"
-            id="tab-crops"
-          >
-            作物
-          </button>
-          <button
-            class="tabs__tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-fish"
-            data-tab-target="fish"
-            id="tab-fish"
-          >
-            魚類
-          </button>
-          <button
-            class="tabs__tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-processed"
-            data-tab-target="processed"
-            id="tab-processed"
-          >
-            加工品
-          </button>
-        </div>
+        <div class="tabs__list" role="tablist" aria-label="功能頁籤" data-tabs-list></div>
         <div class="tabs__panels">
           <section
-            class="tabs__panel"
+            class="tabs__panel is-active"
             role="tabpanel"
             tabindex="0"
-            aria-labelledby="tab-recipes"
-            id="panel-recipes"
-            data-tab-panel="recipes"
-          ></section>
-          <section
-            class="tabs__panel"
-            role="tabpanel"
-            tabindex="0"
-            aria-labelledby="tab-crops"
-            id="panel-crops"
-            data-tab-panel="crops"
-          ></section>
-          <section
-            class="tabs__panel"
-            role="tabpanel"
-            tabindex="0"
-            aria-labelledby="tab-fish"
-            id="panel-fish"
-            data-tab-panel="fish"
-          ></section>
-          <section
-            class="tabs__panel"
-            role="tabpanel"
-            tabindex="0"
-            aria-labelledby="tab-processed"
-            id="panel-processed"
-            data-tab-panel="processed"
+            data-tab-panel="content"
           ></section>
         </div>
       </div>
