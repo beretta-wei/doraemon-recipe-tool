@@ -58,16 +58,18 @@ const createDetailRow = (label, contentNode, { interactive = false, onClick } = 
 
 const createOwnedToggle = (item) => {
   const label = document.createElement("label");
-  label.className = "ingredient-card__owned";
+  label.className = "ingredient-card__owned form-check d-flex align-items-center gap-2";
 
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.className = "form-check-input m-0";
   checkbox.checked = ownedState.get(item.name);
   checkbox.addEventListener("change", () => {
     ownedState.set(item.name, checkbox.checked);
   });
 
   const text = document.createElement("span");
+  text.className = "form-check-label";
   text.textContent = "已擁有";
 
   label.appendChild(checkbox);
@@ -80,7 +82,7 @@ export function renderIngredientsView(container, ingredients, category) {
   container.innerHTML = "";
 
   const title = document.createElement("h2");
-  title.className = "category-title";
+  title.className = "category-title mb-3";
   title.textContent = category;
   container.appendChild(title);
 
@@ -97,34 +99,40 @@ export function renderIngredientsView(container, ingredients, category) {
   }
 
   const list = document.createElement("div");
-  list.className = "ingredient-list";
+  list.className = "ingredient-list row g-3";
 
   filtered.forEach((item) => {
+    const column = document.createElement("div");
+    column.className = "col-12 col-md-6 col-lg-4";
+
     const card = document.createElement("article");
-    card.className = "ingredient-card";
+    card.className = "ingredient-card card shadow-sm h-100";
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body d-flex flex-column gap-3";
 
     const name = document.createElement("h3");
-    name.className = "ingredient-card__title";
+    name.className = "ingredient-card__title h5 mb-0";
     name.textContent = item.name;
 
     const sub = document.createElement("p");
-    sub.className = "ingredient-card__subtitle";
+    sub.className = "ingredient-card__subtitle text-muted mb-0";
     sub.textContent = item.smallCategory || "—";
 
-    card.appendChild(name);
-    card.appendChild(sub);
+    cardBody.appendChild(name);
+    cardBody.appendChild(sub);
 
-    card.appendChild(
+    cardBody.appendChild(
       createDetailRow("取得季節", createTagList(item.seasons))
     );
-    card.appendChild(
+    cardBody.appendChild(
       createDetailRow("取得方式", createTagList(item.obtainMethod))
     );
-    card.appendChild(
+    cardBody.appendChild(
       createDetailRow("取得位置", createTagList(item.obtainLocation))
     );
     const ownedToggle = createOwnedToggle(item);
-    card.appendChild(
+    cardBody.appendChild(
       createDetailRow("我擁有", ownedToggle.element, {
         interactive: true,
         onClick: () => {
@@ -134,7 +142,9 @@ export function renderIngredientsView(container, ingredients, category) {
       })
     );
 
-    list.appendChild(card);
+    card.appendChild(cardBody);
+    column.appendChild(card);
+    list.appendChild(column);
   });
 
   container.appendChild(list);

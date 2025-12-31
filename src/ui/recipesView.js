@@ -122,7 +122,8 @@ const createPriceMetaItem = (label, onOpen) => {
   const dt = document.createElement("dt");
   const toggleButton = document.createElement("button");
   toggleButton.type = "button";
-  toggleButton.className = "recipe-card__drawer-toggle";
+  toggleButton.className =
+    "recipe-card__drawer-toggle btn btn-outline-primary btn-sm w-100";
   toggleButton.setAttribute("aria-haspopup", "dialog");
 
   const labelText = document.createElement("span");
@@ -149,13 +150,16 @@ const createPriceMetaItem = (label, onOpen) => {
 
 const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
   const card = document.createElement("article");
-  card.className = "recipe-card";
+  card.className = "recipe-card card shadow-sm h-100";
+
+  const cardBody = document.createElement("div");
+  cardBody.className = "card-body d-flex flex-column gap-3";
 
   const header = document.createElement("div");
   header.className = "recipe-card__header";
 
   const title = document.createElement("h3");
-  title.className = "recipe-card__title";
+  title.className = "recipe-card__title h5 mb-0";
   title.textContent = normalizeText(pickFieldValue(recipe, FIELD_MAP.name));
 
   header.appendChild(title);
@@ -164,7 +168,7 @@ const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
   ingredientSection.className = "recipe-card__section";
 
   const ingredientTitle = document.createElement("p");
-  ingredientTitle.className = "recipe-card__section-title";
+  ingredientTitle.className = "recipe-card__section-title text-muted mb-1";
   ingredientTitle.textContent = "食材";
 
   const ingredientList = document.createElement("ul");
@@ -192,7 +196,7 @@ const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
   ingredientSection.append(ingredientTitle, ingredientList);
 
   const meta = document.createElement("dl");
-  meta.className = "recipe-card__meta";
+  meta.className = "recipe-card__meta mb-0";
   meta.append(
     createMetaItem("使用器具", pickFieldValue(recipe, FIELD_MAP.tool)),
     createMetaItem("回復量", pickFieldValue(recipe, FIELD_MAP.recovery), {
@@ -201,7 +205,8 @@ const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
     createPriceMetaItem("每星售價", () => onOpenPriceDrawer(recipe))
   );
 
-  card.append(header, ingredientSection, meta);
+  cardBody.append(header, ingredientSection, meta);
+  card.appendChild(cardBody);
 
   return card;
 };
@@ -214,7 +219,7 @@ export function renderRecipesView(container, recipes) {
   wrapper.className = "recipes-view";
 
   const list = document.createElement("div");
-  list.className = "recipes-view__list";
+  list.className = "recipes-view__list row g-3";
 
   const priceDrawerOverlay = document.createElement("div");
   priceDrawerOverlay.className = "recipes-view__drawer-overlay";
@@ -237,7 +242,7 @@ export function renderRecipesView(container, recipes) {
 
   const priceDrawerClose = document.createElement("button");
   priceDrawerClose.type = "button";
-  priceDrawerClose.className = "recipes-view__drawer-close";
+  priceDrawerClose.className = "recipes-view__drawer-close btn btn-outline-secondary btn-sm";
   priceDrawerClose.textContent = "關閉";
 
   priceDrawerHeader.append(priceDrawerTitle, priceDrawerClose);
@@ -303,28 +308,31 @@ export function renderRecipesView(container, recipes) {
   }
 
   const filter = document.createElement("div");
-  filter.className = "recipes-view__filter";
+  filter.className = "recipes-view__filter card shadow-sm";
+
+  const filterBody = document.createElement("div");
+  filterBody.className = "card-body";
 
   const filterLabel = document.createElement("label");
-  filterLabel.className = "recipes-view__filter-label";
+  filterLabel.className = "form-label mb-1";
   filterLabel.textContent = "依食材篩選料理";
   filterLabel.setAttribute("for", "recipes-filter-ingredient");
 
   const filterInput = document.createElement("input");
   filterInput.id = "recipes-filter-ingredient";
-  filterInput.className = "recipes-view__filter-input";
+  filterInput.className = "form-control mb-3";
   filterInput.type = "search";
   filterInput.placeholder = "輸入食材名稱（例如：馬鈴薯）";
   filterInput.autocomplete = "off";
 
   const missingFilterLabel = document.createElement("label");
-  missingFilterLabel.className = "recipes-view__filter-label";
+  missingFilterLabel.className = "form-label mb-1";
   missingFilterLabel.textContent = "依缺少材料篩選";
   missingFilterLabel.setAttribute("for", "recipes-filter-missing");
 
   const missingFilterSelect = document.createElement("select");
   missingFilterSelect.id = "recipes-filter-missing";
-  missingFilterSelect.className = "recipes-view__filter-input";
+  missingFilterSelect.className = "form-select";
 
   [
     { label: "全部料理", value: "all" },
@@ -338,28 +346,32 @@ export function renderRecipesView(container, recipes) {
     missingFilterSelect.appendChild(item);
   });
 
-  filter.append(
+  filterBody.append(
     filterLabel,
     filterInput,
     missingFilterLabel,
     missingFilterSelect
   );
+  filter.appendChild(filterBody);
 
   const renderList = (filteredRecipes) => {
     list.innerHTML = "";
 
     if (filteredRecipes.length === 0) {
       const empty = document.createElement("div");
-      empty.className = "recipes-view__empty";
+      empty.className = "recipes-view__empty col-12";
       empty.textContent = "沒有符合的料理，請嘗試其他食材。";
       list.appendChild(empty);
       return;
     }
 
     filteredRecipes.forEach((recipe) => {
-      list.appendChild(
+      const column = document.createElement("div");
+      column.className = "col-12 col-lg-6";
+      column.appendChild(
         createRecipeCard(recipe, { onOpenPriceDrawer: openPriceDrawer })
       );
+      list.appendChild(column);
     });
   };
 
