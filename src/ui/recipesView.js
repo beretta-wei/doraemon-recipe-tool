@@ -82,10 +82,28 @@ const buildPriceEntries = (recipe) =>
 
 const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
   const wrapper = document.createElement("div");
-  wrapper.className = "recipe-card__meta-item";
+  wrapper.className = "recipe-card__meta-item recipe-card__meta-item--collapsible";
 
   const dt = document.createElement("dt");
-  dt.textContent = label;
+  const toggleButton = document.createElement("button");
+  toggleButton.type = "button";
+  toggleButton.className = "recipe-card__toggle";
+  toggleButton.setAttribute("aria-expanded", "false");
+
+  const labelText = document.createElement("span");
+  labelText.className = "recipe-card__toggle-label";
+  labelText.textContent = label;
+
+  const hintText = document.createElement("span");
+  hintText.className = "recipe-card__toggle-hint";
+  hintText.textContent = "點擊查看";
+
+  const icon = document.createElement("span");
+  icon.className = "recipe-card__toggle-icon";
+  icon.textContent = "▸";
+
+  toggleButton.append(labelText, hintText, icon);
+  dt.appendChild(toggleButton);
 
   const dd = document.createElement("dd");
   const list = document.createElement("ul");
@@ -109,6 +127,13 @@ const createPriceMetaItem = (label, entries, { placeholder = "—" } = {}) => {
 
   dd.appendChild(list);
   wrapper.append(dt, dd);
+
+  toggleButton.addEventListener("click", () => {
+    const isExpanded = wrapper.classList.toggle("is-expanded");
+    toggleButton.setAttribute("aria-expanded", String(isExpanded));
+    hintText.textContent = isExpanded ? "點擊收合" : "點擊查看";
+  });
+
   return wrapper;
 };
 
