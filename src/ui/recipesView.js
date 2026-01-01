@@ -21,7 +21,7 @@ const PRICE_FIELDS = [
 ];
 const FIELD_MAP = {
   name: ["料理食譜"],
-  tool: ["使用器具"],
+  tool: ["使用器具", "廚具"],
   recovery: ["回復量"],
   bonus: ["食譜+"],
 };
