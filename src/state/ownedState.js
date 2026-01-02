@@ -66,9 +66,16 @@ export const getAllOwned = () => {
     .map(([key]) => key);
 };
 
+export const clearStorage = () => {
+  localStorage.removeItem(STORAGE_KEY);
+  ownedState = {};
+  hasLoaded = true;
+};
+
 export default {
   load,
   set,
   get,
   getAllOwned,
+  clearStorage,
 };

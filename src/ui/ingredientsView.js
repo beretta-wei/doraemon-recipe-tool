@@ -81,10 +81,24 @@ const createOwnedToggle = (item) => {
 export function renderIngredientsView(container, ingredients, category) {
   container.innerHTML = "";
 
+  const header = document.createElement("div");
+  header.className = "d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3";
+
   const title = document.createElement("h2");
-  title.className = "category-title mb-3";
+  title.className = "category-title mb-0";
   title.textContent = category;
-  container.appendChild(title);
+
+  const clearButton = document.createElement("button");
+  clearButton.type = "button";
+  clearButton.className = "btn btn-outline-danger btn-sm";
+  clearButton.textContent = "清除所有已擁有食材";
+  clearButton.addEventListener("click", () => {
+    ownedState.clearStorage();
+    renderIngredientsView(container, ingredients, category);
+  });
+
+  header.append(title, clearButton);
+  container.appendChild(header);
 
   const filtered = ingredients.filter(
     (item) => item.bigCategory === category
