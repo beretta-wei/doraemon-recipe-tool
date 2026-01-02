@@ -21,7 +21,7 @@ const createTagList = (items) => {
   return list;
 };
 
-const createDetailRow = (label, contentNode, { interactive = false, onClick } = {}) => {
+const createDetailRow = (label, contentNode) => {
   const wrapper = document.createElement("div");
   wrapper.className = "ingredient-card__row";
 
@@ -36,23 +36,6 @@ const createDetailRow = (label, contentNode, { interactive = false, onClick } = 
   wrapper.appendChild(title);
   wrapper.appendChild(value);
 
-  if (interactive) {
-    wrapper.classList.add("ingredient-card__row--interactive");
-    wrapper.tabIndex = 0;
-    wrapper.setAttribute("role", "button");
-    wrapper.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLInputElement) {
-        return;
-      }
-      onClick?.();
-    });
-    wrapper.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        onClick?.();
-      }
-    });
-  }
   return wrapper;
 };
 
@@ -64,9 +47,8 @@ const createOwnedToggle = (item) => {
   checkbox.type = "checkbox";
   checkbox.className = "form-check-input m-0";
   checkbox.checked = ownedState.get(item.name);
-  checkbox.addEventListener("change", () => {
-    ownedState.set(item.name, checkbox.checked);
-  });
+  checkbox.disabled = true;
+  checkbox.setAttribute("aria-label", "已擁有");
 
   const text = document.createElement("span");
   text.className = "form-check-label";
@@ -120,7 +102,9 @@ export function renderIngredientsView(container, ingredients, category) {
     column.className = "col-12 col-md-6 col-lg-4";
 
     const card = document.createElement("article");
-    card.className = "ingredient-card card shadow-sm h-100";
+    card.className = "ingredient-card ingredient-card--interactive card shadow-sm h-100";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
 
     const cardBody = document.createElement("div");
     cardBody.className = "card-body d-flex flex-column gap-3";
@@ -147,14 +131,38 @@ export function renderIngredientsView(container, ingredients, category) {
     );
     const ownedToggle = createOwnedToggle(item);
     cardBody.appendChild(
-      createDetailRow("我擁有", ownedToggle.element, {
-        interactive: true,
-        onClick: () => {
-          ownedToggle.checkbox.checked = !ownedToggle.checkbox.checked;
-          ownedState.set(item.name, ownedToggle.checkbox.checked);
-        },
-      })
+      createDetailRow("我擁有", ownedToggle.element)
     );
+
+    const applyOwnedVisual = (isOwned) => {
+      ownedToggle.checkbox.checked = isOwned;
+      card.classList.toggle("ingredient-card--owned", isOwned);
+    };
+
+    applyOwnedVisual(ownedState.get(item.name));
+
+    const toggleOwnedState = () => {
+      const nextOwned = !ownedToggle.checkbox.checked;
+      ownedState.set(item.name, nextOwned);
+      applyOwnedVisual(nextOwned);
+    };
+
+    const shouldIgnoreToggle = (target) =>
+      target instanceof HTMLElement && target.closest("button, a");
+
+    card.addEventListener("click", (event) => {
+      if (shouldIgnoreToggle(event.target)) {
+        return;
+      }
+      toggleOwnedState();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleOwnedState();
+      }
+    });
 
     card.appendChild(cardBody);
     column.appendChild(card);
