@@ -50,17 +50,68 @@ const buildOwnedIngredientSet = () =>
       .filter(Boolean)
   );
 
-const buildRequiredIngredients = (recipe) =>
-  INGREDIENT_FIELDS.map((keys) => normalizeText(pickFieldValue(recipe, keys)))
-    .filter(Boolean);
+const buildRecipeIngredientRequirements = (recipe) => {
+  const recipeIngredients = Array.isArray(recipe.ingredients)
+    ? recipe.ingredients
+    : null;
 
-const buildMissingCount = (recipe, ownedSet) => {
-  const requiredIngredients = buildRequiredIngredients(recipe);
-  const requiredCount = requiredIngredients.length;
-  const ownedCount = requiredIngredients.filter((name) =>
-    ownedSet.has(name.toLowerCase())
-  ).length;
-  return requiredCount - ownedCount;
+  if (recipeIngredients && recipeIngredients.length > 0) {
+    return recipeIngredients
+      .map((item) => {
+        const main = normalizeText(item?.main);
+        if (!main) {
+          return null;
+        }
+        const alternatives = Array.isArray(item?.alternatives)
+          ? item.alternatives.map(normalizeText).filter(Boolean)
+          : [];
+        return { main, alternatives };
+      })
+      .filter(Boolean);
+  }
+
+  return INGREDIENT_FIELDS.map((keys) => normalizeText(pickFieldValue(recipe, keys)))
+    .filter(Boolean)
+    .map((main) => ({ main, alternatives: [] }));
+};
+
+const buildIngredientStatus = (recipe, ownedSet) => {
+  const requirements = buildRecipeIngredientRequirements(recipe);
+  const usedAlternatives = [];
+  let missingCount = 0;
+
+  requirements.forEach((requirement) => {
+    const mainKey = requirement.main.toLowerCase();
+    if (ownedSet.has(mainKey)) {
+      return;
+    }
+
+    const usedAlternative = requirement.alternatives.find((alternative) =>
+      ownedSet.has(alternative.toLowerCase())
+    );
+
+    if (usedAlternative) {
+      usedAlternatives.push({ main: requirement.main, used: usedAlternative });
+      return;
+    }
+
+    missingCount += 1;
+  });
+
+  return { missingCount, usedAlternatives };
+};
+
+const buildMissingCount = (recipe, ownedSet) =>
+  buildIngredientStatus(recipe, ownedSet).missingCount;
+
+const buildRecipeStatusLabel = ({ missingCount, usedAlternatives }) => {
+  if (missingCount > 0) {
+    return `不可做（缺 ${missingCount} 樣）`;
+  }
+  if (usedAlternatives.length > 0) {
+    return "可做（替代）";
+  }
+  return "可做";
 };
 
 const buildIngredientEntries = (recipe) => {
@@ -164,7 +215,10 @@ const createPriceMetaItem = (label, onOpen) => {
   return wrapper;
 };
 
-const createRecipeCard = (recipe, { onOpenPriceDrawer, onOpenIngredientDrawer }) => {
+const createRecipeCard = (
+  recipe,
+  { onOpenPriceDrawer, onOpenIngredientDrawer, ingredientStatus }
+) => {
   const card = document.createElement("article");
   card.className = "recipe-card card shadow-sm h-100";
 
@@ -239,6 +293,7 @@ const createRecipeCard = (recipe, { onOpenPriceDrawer, onOpenIngredientDrawer })
   const meta = document.createElement("dl");
   meta.className = "recipe-card__meta mb-0";
   meta.append(
+    createMetaItem("料理狀態", buildRecipeStatusLabel(ingredientStatus)),
     createMetaItem("使用器具", pickFieldValue(recipe, FIELD_MAP.tool)),
     createMetaItem("回復量", pickFieldValue(recipe, FIELD_MAP.recovery), {
       placeholder: "—",
@@ -494,10 +549,12 @@ export function renderRecipesView(container, recipes) {
     filteredRecipes.forEach((recipe) => {
       const column = document.createElement("div");
       column.className = "col-12 col-lg-6";
+      const ingredientStatus = buildIngredientStatus(recipe, ownedIngredientSet);
       column.appendChild(
         createRecipeCard(recipe, {
           onOpenPriceDrawer: openPriceDrawer,
           onOpenIngredientDrawer: openIngredientDrawer,
+          ingredientStatus,
         })
       );
       list.appendChild(column);
