@@ -50,7 +50,7 @@ if (root) {
 
   const tabs = root.querySelector("[data-tabs]");
   if (tabs && panel) {
-    attachBackToTopButton(tabs, document.scrollingElement);
+    attachBackToTopButton(tabs, panel);
   }
 
   const categoryLinks = root.querySelectorAll(".tabs__tab");
