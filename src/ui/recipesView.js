@@ -156,9 +156,24 @@ const matchesIngredientFilter = (recipe, keyword) => {
   }
 
   const normalizedQuery = query.toLowerCase();
-  return buildIngredientEntries(recipe).some((entry) =>
-    entry.text.toLowerCase().includes(normalizedQuery)
-  );
+  const recipeIngredients = Array.isArray(recipe.ingredients)
+    ? recipe.ingredients
+    : [];
+
+  return recipeIngredients.some((ingredient) => {
+    const main = normalizeText(ingredient?.main).toLowerCase();
+    if (main === normalizedQuery) {
+      return true;
+    }
+
+    const alternatives = Array.isArray(ingredient?.alternatives)
+      ? ingredient.alternatives
+      : [];
+
+    return alternatives.some(
+      (alternative) => normalizeText(alternative).toLowerCase() === normalizedQuery
+    );
+  });
 };
 
 const createMetaItem = (label, value, { placeholder = "" } = {}) => {
