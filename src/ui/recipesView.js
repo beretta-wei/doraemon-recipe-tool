@@ -65,18 +65,34 @@ const buildMissingCount = (recipe, ownedSet) => {
 
 const buildIngredientEntries = (recipe) => {
   const items = [];
+  const recipeIngredients = Array.isArray(recipe.ingredients)
+    ? recipe.ingredients
+    : null;
 
-  INGREDIENT_FIELDS.forEach((keys) => {
-    const rawValue = pickFieldValue(recipe, keys);
-    const text = normalizeText(rawValue);
-    if (text) {
-      items.push({ text, isBonus: false });
-    }
-  });
+  if (recipeIngredients && recipeIngredients.length > 0) {
+    recipeIngredients.forEach((item) => {
+      const text = normalizeText(item?.main);
+      if (!text) {
+        return;
+      }
+      const alternatives = Array.isArray(item?.alternatives)
+        ? item.alternatives.map(normalizeText).filter(Boolean)
+        : [];
+      items.push({ text, isBonus: false, alternatives });
+    });
+  } else {
+    INGREDIENT_FIELDS.forEach((keys) => {
+      const rawValue = pickFieldValue(recipe, keys);
+      const text = normalizeText(rawValue);
+      if (text) {
+        items.push({ text, isBonus: false, alternatives: [] });
+      }
+    });
+  }
 
   const bonusText = normalizeText(pickFieldValue(recipe, FIELD_MAP.bonus));
   if (bonusText) {
-    items.push({ text: bonusText, isBonus: true });
+    items.push({ text: bonusText, isBonus: true, alternatives: [] });
   }
 
   return items;
@@ -148,7 +164,7 @@ const createPriceMetaItem = (label, onOpen) => {
   return wrapper;
 };
 
-const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
+const createRecipeCard = (recipe, { onOpenPriceDrawer, onOpenIngredientDrawer }) => {
   const card = document.createElement("article");
   card.className = "recipe-card card shadow-sm h-100";
 
@@ -178,10 +194,35 @@ const createRecipeCard = (recipe, { onOpenPriceDrawer }) => {
   ingredientEntries.forEach((entry) => {
     const item = document.createElement("li");
     item.className = "recipe-card__ingredient";
+    const hasAlternatives =
+      !entry.isBonus && Array.isArray(entry.alternatives) && entry.alternatives.length > 0;
+    if (hasAlternatives) {
+      item.classList.add("recipe-card__ingredient--has-alternatives");
+    }
     if (entry.isBonus) {
       item.classList.add("is-bonus");
     }
-    item.textContent = entry.text;
+
+    if (hasAlternatives) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "recipe-card__ingredient-button";
+      button.textContent = entry.text;
+      button.setAttribute("aria-haspopup", "dialog");
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        onOpenIngredientDrawer({
+          name: entry.text,
+          alternatives: entry.alternatives,
+        });
+      });
+      item.appendChild(button);
+    } else {
+      const label = document.createElement("span");
+      label.className = "recipe-card__ingredient-label";
+      label.textContent = entry.text;
+      item.appendChild(label);
+    }
 
     if (entry.isBonus) {
       const badge = document.createElement("span");
@@ -253,15 +294,58 @@ export function renderRecipesView(container, recipes) {
   priceDrawerPanel.append(priceDrawerHeader, priceDrawerList);
   priceDrawer.appendChild(priceDrawerPanel);
 
+  const ingredientDrawerOverlay = document.createElement("div");
+  ingredientDrawerOverlay.className = "recipes-view__drawer-overlay";
+  ingredientDrawerOverlay.setAttribute("aria-hidden", "true");
+
+  const ingredientDrawer = document.createElement("aside");
+  ingredientDrawer.className = "recipes-view__drawer";
+  ingredientDrawer.setAttribute("role", "dialog");
+  ingredientDrawer.setAttribute("aria-modal", "true");
+  ingredientDrawer.setAttribute("aria-hidden", "true");
+
+  const ingredientDrawerPanel = document.createElement("div");
+  ingredientDrawerPanel.className = "recipes-view__drawer-panel";
+
+  const ingredientDrawerHeader = document.createElement("div");
+  ingredientDrawerHeader.className = "recipes-view__drawer-header";
+
+  const ingredientDrawerTitle = document.createElement("h3");
+  ingredientDrawerTitle.className = "recipes-view__drawer-title";
+
+  const ingredientDrawerClose = document.createElement("button");
+  ingredientDrawerClose.type = "button";
+  ingredientDrawerClose.className =
+    "recipes-view__drawer-close btn btn-outline-secondary btn-sm";
+  ingredientDrawerClose.textContent = "關閉";
+
+  ingredientDrawerHeader.append(ingredientDrawerTitle, ingredientDrawerClose);
+
+  const ingredientDrawerList = document.createElement("ul");
+  ingredientDrawerList.className = "recipes-view__drawer-list";
+
+  ingredientDrawerPanel.append(ingredientDrawerHeader, ingredientDrawerList);
+  ingredientDrawer.appendChild(ingredientDrawerPanel);
+
+  let activeIngredient = null;
+  const updateBodyDrawerState = () => {
+    const isOpen =
+      priceDrawer.classList.contains("is-visible") ||
+      ingredientDrawer.classList.contains("is-visible");
+    document.body.classList.toggle("is-drawer-open", isOpen);
+  };
+
   const closePriceDrawer = () => {
     priceDrawerOverlay.classList.remove("is-visible");
     priceDrawer.classList.remove("is-visible");
     priceDrawerOverlay.setAttribute("aria-hidden", "true");
     priceDrawer.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("is-drawer-open");
+    updateBodyDrawerState();
   };
 
   const openPriceDrawer = (recipe) => {
+    closeIngredientDrawer();
+    activeIngredient = null;
     priceDrawerTitle.textContent = normalizeText(
       pickFieldValue(recipe, FIELD_MAP.name)
     );
@@ -286,14 +370,56 @@ export function renderRecipesView(container, recipes) {
     priceDrawer.classList.add("is-visible");
     priceDrawerOverlay.setAttribute("aria-hidden", "false");
     priceDrawer.setAttribute("aria-hidden", "false");
-    document.body.classList.add("is-drawer-open");
+    updateBodyDrawerState();
+  };
+
+  const closeIngredientDrawer = () => {
+    ingredientDrawerOverlay.classList.remove("is-visible");
+    ingredientDrawer.classList.remove("is-visible");
+    ingredientDrawerOverlay.setAttribute("aria-hidden", "true");
+    ingredientDrawer.setAttribute("aria-hidden", "true");
+    activeIngredient = null;
+    updateBodyDrawerState();
+  };
+
+  const openIngredientDrawer = (ingredient) => {
+    closePriceDrawer();
+    activeIngredient = ingredient;
+    ingredientDrawerTitle.textContent = ingredient?.name || "";
+    ingredientDrawerList.innerHTML = "";
+    const alternatives = Array.isArray(ingredient?.alternatives)
+      ? ingredient.alternatives
+      : [];
+
+    if (alternatives.length === 0) {
+      const emptyItem = document.createElement("li");
+      emptyItem.className = "recipes-view__drawer-item";
+      emptyItem.textContent = "目前沒有可用的替代材料。";
+      ingredientDrawerList.appendChild(emptyItem);
+    } else {
+      alternatives.forEach((name) => {
+        const item = document.createElement("li");
+        item.className = "recipes-view__drawer-item";
+        item.textContent = name;
+        ingredientDrawerList.appendChild(item);
+      });
+    }
+
+    ingredientDrawerOverlay.classList.add("is-visible");
+    ingredientDrawer.classList.add("is-visible");
+    ingredientDrawerOverlay.setAttribute("aria-hidden", "false");
+    ingredientDrawer.setAttribute("aria-hidden", "false");
+    updateBodyDrawerState();
   };
 
   priceDrawerOverlay.addEventListener("click", closePriceDrawer);
   priceDrawerClose.addEventListener("click", closePriceDrawer);
+  ingredientDrawerOverlay.addEventListener("click", closeIngredientDrawer);
+  ingredientDrawerClose.addEventListener("click", closeIngredientDrawer);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closePriceDrawer();
+      closeIngredientDrawer();
     }
   });
 
@@ -369,7 +495,10 @@ export function renderRecipesView(container, recipes) {
       const column = document.createElement("div");
       column.className = "col-12 col-lg-6";
       column.appendChild(
-        createRecipeCard(recipe, { onOpenPriceDrawer: openPriceDrawer })
+        createRecipeCard(recipe, {
+          onOpenPriceDrawer: openPriceDrawer,
+          onOpenIngredientDrawer: openIngredientDrawer,
+        })
       );
       list.appendChild(column);
     });
@@ -397,6 +526,13 @@ export function renderRecipesView(container, recipes) {
   missingFilterSelect.addEventListener("change", updateFilter);
   renderList(recipes);
 
-  wrapper.append(filter, list, priceDrawerOverlay, priceDrawer);
+  wrapper.append(
+    filter,
+    list,
+    priceDrawerOverlay,
+    priceDrawer,
+    ingredientDrawerOverlay,
+    ingredientDrawer
+  );
   container.appendChild(wrapper);
 }
