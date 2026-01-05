@@ -8,6 +8,28 @@ export const recipes = [
     "材料 3": "小黃瓜",
     "材料 4": "白花椰菜",
     "材料 5": "美乃滋",
+    "ingredients": [
+      {
+        "main": "蕪菁",
+        "alternatives": []
+      },
+      {
+        "main": "高麗菜",
+        "alternatives": []
+      },
+      {
+        "main": "小黃瓜",
+        "alternatives": []
+      },
+      {
+        "main": "白花椰菜",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      }
+    ],
     "食譜+": "豌豆",
     "使用器具": "",
     "價格": "",
@@ -31,6 +53,28 @@ export const recipes = [
     "材料 3": "甜椒",
     "材料 4": "玉米",
     "材料 5": "美乃滋",
+    "ingredients": [
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "鳳梨",
+        "alternatives": []
+      },
+      {
+        "main": "甜椒",
+        "alternatives": []
+      },
+      {
+        "main": "玉米",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      }
+    ],
     "食譜+": "南瓜",
     "使用器具": "",
     "價格": "",
@@ -54,6 +98,28 @@ export const recipes = [
     "材料 3": "茄子",
     "材料 4": "青椒",
     "材料 5": "美乃滋",
+    "ingredients": [
+      {
+        "main": "胡蘿蔔",
+        "alternatives": []
+      },
+      {
+        "main": "地瓜",
+        "alternatives": []
+      },
+      {
+        "main": "茄子",
+        "alternatives": []
+      },
+      {
+        "main": "青椒",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      }
+    ],
     "食譜+": "菠菜",
     "使用器具": "",
     "價格": "",
@@ -77,6 +143,28 @@ export const recipes = [
     "材料 3": "花椰菜",
     "材料 4": "美乃滋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "白蘿蔔",
+        "alternatives": []
+      },
+      {
+        "main": "白菜",
+        "alternatives": []
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蜜柑",
     "使用器具": "",
     "價格": "",
@@ -100,6 +188,44 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "美乃滋",
     "材料 5": "麵包",
+    "ingredients": [
+      {
+        "main": "小黃瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "麵包",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蝦",
     "使用器具": "",
     "價格": "",
@@ -123,6 +249,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "地瓜",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "",
     "價格": "",
@@ -146,6 +294,42 @@ export const recipes = [
     "材料 3": "胡蘿蔔",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蕪菁",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "高麗菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄",
     "使用器具": "",
     "價格": "",
@@ -169,6 +353,52 @@ export const recipes = [
     "材料 3": "甜椒",
     "材料 4": "牛奶",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "小黃瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "南瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "甜椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "帆立貝",
     "使用器具": "",
     "價格": "",
@@ -192,6 +422,38 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "白蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "柚子",
     "使用器具": "",
     "價格": "",
@@ -215,6 +477,88 @@ export const recipes = [
     "材料 3": "哈蜜瓜",
     "材料 4": "蘋果",
     "材料 5": "蜜柑",
+    "ingredients": [
+      {
+        "main": "草莓",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "西瓜",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "哈蜜瓜",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "蘋果",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "蜜柑",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      }
+    ],
     "食譜+": "櫻桃",
     "使用器具": "",
     "價格": "",
@@ -238,6 +582,64 @@ export const recipes = [
     "材料 3": "蜜柑",
     "材料 4": "優格",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鳳梨",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "蘋果",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "蜜柑",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "優格",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "草莓",
     "使用器具": "",
     "價格": "",
@@ -261,6 +663,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "紅豆餡",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "",
     "價格": "",
@@ -284,6 +708,36 @@ export const recipes = [
     "材料 3": "油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "鮪魚",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "",
     "價格": "",
@@ -307,6 +761,28 @@ export const recipes = [
     "材料 3": "蜂蜜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蘆薈",
+        "alternatives": []
+      },
+      {
+        "main": "優格",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "",
     "價格": "",
@@ -330,6 +806,36 @@ export const recipes = [
     "材料 3": "薑",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "鰹魚",
+        "alternatives": []
+      },
+      {
+        "main": "薑",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "",
     "價格": "",
@@ -353,6 +859,53 @@ export const recipes = [
     "材料 3": "鰹魚",
     "材料 4": "鮪魚",
     "材料 5": "比目魚",
+    "ingredients": [
+      {
+        "main": "鯛魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "鮭魚",
+        "alternatives": [
+          "鮭魚",
+          "虹鱒",
+          "油錐",
+          "褐帶石斑魚"
+        ]
+      },
+      {
+        "main": "鰹魚",
+        "alternatives": []
+      },
+      {
+        "main": "鮪魚",
+        "alternatives": [
+          "鯊魚",
+          "旗魚",
+          "鮪魚",
+          "豆腐鯊",
+          "鋸鯊"
+        ]
+      },
+      {
+        "main": "比目魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      }
+    ],
     "食譜+": "紅龍蝦",
     "使用器具": "",
     "價格": "",
@@ -376,6 +929,41 @@ export const recipes = [
     "材料 3": "油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鮭魚",
+        "alternatives": [
+          "鮭魚",
+          "虹鱒",
+          "油錐",
+          "褐帶石斑魚"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "小黃瓜",
     "使用器具": "",
     "價格": "",
@@ -399,6 +987,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "梅子",
+        "alternatives": []
+      },
+      {
+        "main": "小黃瓜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "",
     "價格": "",
@@ -422,6 +1032,28 @@ export const recipes = [
     "材料 3": "美乃滋",
     "材料 4": "香辛料",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "皇帶魚",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "香辛料",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄醬",
     "使用器具": "",
     "價格": "",
@@ -445,6 +1077,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "柿子",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "牛奶",
     "使用器具": "",
     "價格": "",
@@ -468,6 +1122,33 @@ export const recipes = [
     "材料 3": "蝦",
     "材料 4": "烏賊",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "海帶",
+        "alternatives": []
+      },
+      {
+        "main": "鮭魚",
+        "alternatives": [
+          "鮭魚",
+          "虹鱒",
+          "油錐",
+          "褐帶石斑魚"
+        ]
+      },
+      {
+        "main": "蝦",
+        "alternatives": []
+      },
+      {
+        "main": "烏賊",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "章魚",
     "使用器具": "",
     "價格": "",
@@ -491,6 +1172,28 @@ export const recipes = [
     "材料 3": "洋蔥",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "帆立貝",
+        "alternatives": []
+      },
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蝦",
     "使用器具": "",
     "價格": "",
@@ -514,6 +1217,33 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵包",
+        "alternatives": []
+      },
+      {
+        "main": "蘋果醬",
+        "alternatives": [
+          "蘋果醬",
+          "葡萄醬",
+          "柚子醬",
+          "藍莓醬"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "柚子醬",
     "使用器具": "",
     "價格": "",
@@ -537,6 +1267,41 @@ export const recipes = [
     "材料 3": "胡蘿蔔",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "義大利麵",
+        "alternatives": []
+      },
+      {
+        "main": "小黃瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "",
     "價格": "",
@@ -560,6 +1325,28 @@ export const recipes = [
     "材料 3": "牛奶",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "起司",
     "使用器具": "",
     "價格": "",
@@ -577,12 +1364,68 @@ export const recipes = [
   {
     "編號": "26.0",
     "圖片": "",
-    "料理食譜": "古怪的料理(※)",
-    "材料 1": "小龍蝦(蝦類)",
-    "材料 2": "地瓜(馬鈴薯)",
-    "材料 3": "蜜柑(水果類)",
-    "材料 4": "香菇(菇類)",
-    "材料 5": "牛蒡(蘿蔔類)",
+    "料理食譜": "古怪的料理",
+    "材料 1": "小龍蝦",
+    "材料 2": "地瓜",
+    "材料 3": "蜜柑",
+    "材料 4": "香菇",
+    "材料 5": "牛蒡",
+    "ingredients": [
+      {
+        "main": "小龍蝦",
+        "alternatives": [
+          "小龍蝦",
+          "蝦",
+          "龍蝦",
+          "紅龍蝦"
+        ]
+      },
+      {
+        "main": "地瓜",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "蜜柑",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄",
+          "藍莓",
+          "柚子"
+        ]
+      },
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "牛蒡",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      }
+    ],
     "食譜+": "",
     "使用器具": "",
     "價格": "",
@@ -606,6 +1449,51 @@ export const recipes = [
     "材料 3": "舞菇",
     "材料 4": "麵粉",
     "材料 5": "油",
+    "ingredients": [
+      {
+        "main": "南瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "茄子",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "舞菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蝦",
     "使用器具": "鍋具",
     "價格": "",
@@ -629,6 +1517,52 @@ export const recipes = [
     "材料 3": "南瓜",
     "材料 4": "胡蘿蔔",
     "材料 5": "辛香料",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "南瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "辛香料",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蜂蜜",
     "使用器具": "鍋具",
     "價格": "",
@@ -652,6 +1586,42 @@ export const recipes = [
     "材料 3": "南瓜",
     "材料 4": "牛奶",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "白花椰菜",
+        "alternatives": [
+          "白花椰菜",
+          "花椰菜"
+        ]
+      },
+      {
+        "main": "南瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "鍋具",
     "價格": "",
@@ -670,11 +1640,36 @@ export const recipes = [
     "編號": "30.0",
     "圖片": "",
     "料理食譜": "炸薯條",
-    "材料 1": "馬鈴薯(地瓜)",
+    "材料 1": "馬鈴薯",
     "材料 2": "油",
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄醬",
     "使用器具": "鍋具",
     "價格": "",
@@ -698,6 +1693,32 @@ export const recipes = [
     "材料 3": "起司",
     "材料 4": "奶油",
     "材料 5": "油",
+    "ingredients": [
+      {
+        "main": "沙腸仔",
+        "alternatives": [
+          "沙腸仔",
+          "西太公魚",
+          "稻田魚"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "鍋具",
     "價格": "",
@@ -721,6 +1742,50 @@ export const recipes = [
     "材料 3": "花椰菜",
     "材料 4": "筍子",
     "材料 5": "牛蒡",
+    "ingredients": [
+      {
+        "main": "豌豆",
+        "alternatives": [
+          "豌豆",
+          "玉米"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": [
+          "白花椰菜",
+          "花椰菜"
+        ]
+      },
+      {
+        "main": "筍子",
+        "alternatives": [
+          "艾草",
+          "紫萁",
+          "問荊草",
+          "筍子",
+          "薺菜"
+        ]
+      },
+      {
+        "main": "牛蒡",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      }
+    ],
     "食譜+": "香菇",
     "使用器具": "鍋具",
     "價格": "",
@@ -744,6 +1809,36 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "白蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香菇",
     "使用器具": "鍋具",
     "價格": "",
@@ -767,6 +1862,40 @@ export const recipes = [
     "材料 3": "花椰菜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "鍋具",
     "價格": "",
@@ -790,6 +1919,60 @@ export const recipes = [
     "材料 3": "茄子",
     "材料 4": "青椒",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "茄子",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "青椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "胡蘿蔔",
     "使用器具": "鍋具",
     "價格": "",
@@ -813,6 +1996,55 @@ export const recipes = [
     "材料 3": "木耳",
     "材料 4": "舞菇",
     "材料 5": "章魚",
+    "ingredients": [
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "烏賊",
+        "alternatives": [
+          "烏賊",
+          "章魚"
+        ]
+      },
+      {
+        "main": "木耳",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "舞菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "章魚",
+        "alternatives": [
+          "烏賊",
+          "章魚"
+        ]
+      }
+    ],
     "食譜+": "蝦",
     "使用器具": "鍋具",
     "價格": "",
@@ -836,6 +2068,42 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "松茸",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蝦",
     "使用器具": "鍋具",
     "價格": "",
@@ -859,6 +2127,31 @@ export const recipes = [
     "材料 3": "油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "鍋具",
     "價格": "",
@@ -882,6 +2175,37 @@ export const recipes = [
     "材料 3": "燈籠魚",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "白蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "白菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "燈籠魚",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香菇",
     "使用器具": "鍋具",
     "價格": "",
@@ -905,6 +2229,40 @@ export const recipes = [
     "材料 3": "薑",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "牛蒡",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "鯛魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "薑",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蕪菁",
     "使用器具": "鍋具",
     "價格": "",
@@ -928,6 +2286,42 @@ export const recipes = [
     "材料 3": "香菇",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "白菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "河豚",
+        "alternatives": [
+          "河豚",
+          "箱河魨"
+        ]
+      },
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "白蘿蔔",
     "使用器具": "鍋具",
     "價格": "",
@@ -951,6 +2345,42 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "枇杷",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄",
+          "藍莓",
+          "柚子"
+        ]
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "鍋具",
     "價格": "",
@@ -974,6 +2404,41 @@ export const recipes = [
     "材料 3": "洋蔥",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "泥鰍",
+        "alternatives": []
+      },
+      {
+        "main": "牛蒡",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香菇",
     "使用器具": "鍋具",
     "價格": "",
@@ -997,6 +2462,42 @@ export const recipes = [
     "材料 3": "舞菇",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鱉",
+        "alternatives": []
+      },
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "舞菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "胡蘿蔔",
     "使用器具": "鍋具",
     "價格": "",
@@ -1020,6 +2521,33 @@ export const recipes = [
     "材料 3": "蜂蜜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "虹鱒",
+        "alternatives": [
+          "鮭魚",
+          "虹鱒",
+          "油錐",
+          "褐帶石斑魚"
+        ]
+      },
+      {
+        "main": "薑",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "梅子",
     "使用器具": "鍋具",
     "價格": "",
@@ -1043,6 +2571,50 @@ export const recipes = [
     "材料 3": "甜椒",
     "材料 4": "奶油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "香魚",
+        "alternatives": [
+          "山女鱒",
+          "巨大紅點鮭",
+          "香魚",
+          "骨舌魚",
+          "石川櫻鱒"
+        ]
+      },
+      {
+        "main": "小黃瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "甜椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "鍋具",
     "價格": "",
@@ -1066,6 +2638,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鯖魚",
+        "alternatives": []
+      },
+      {
+        "main": "薑",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "柚子",
     "使用器具": "鍋具",
     "價格": "",
@@ -1089,6 +2683,32 @@ export const recipes = [
     "材料 3": "油",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "西太公魚",
+        "alternatives": [
+          "沙腸仔",
+          "西太公魚",
+          "稻田魚"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "鍋具",
     "價格": "",
@@ -1112,6 +2732,34 @@ export const recipes = [
     "材料 3": "薑",
     "材料 4": "蜂蜜",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鯉魚",
+        "alternatives": []
+      },
+      {
+        "main": "筍子",
+        "alternatives": [
+          "艾草",
+          "紫萁",
+          "問荊草",
+          "筍子",
+          "薺菜"
+        ]
+      },
+      {
+        "main": "薑",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "柚子",
     "使用器具": "鍋具",
     "價格": "",
@@ -1135,6 +2783,51 @@ export const recipes = [
     "材料 3": "番茄",
     "材料 4": "青椒",
     "材料 5": "油",
+    "ingredients": [
+      {
+        "main": "竹筴魚",
+        "alternatives": [
+          "竹莢魚",
+          "鯖魚",
+          "沙丁魚"
+        ]
+      },
+      {
+        "main": "烏賊",
+        "alternatives": [
+          "烏賊",
+          "章魚"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "青椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "帆立貝",
     "使用器具": "鍋具",
     "價格": "",
@@ -1158,6 +2851,51 @@ export const recipes = [
     "材料 3": "鱸魚",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "青椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "鱸魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄",
     "使用器具": "鍋具",
     "價格": "",
@@ -1181,6 +2919,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "鰤魚",
+        "alternatives": []
+      },
+      {
+        "main": "白蘿蔔",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "鍋具",
     "價格": "",
@@ -1204,6 +2964,35 @@ export const recipes = [
     "材料 3": "香辛料",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "巨狗鮨鯉",
+        "alternatives": []
+      },
+      {
+        "main": "食人魚",
+        "alternatives": [
+          "花鯰",
+          "鱧魚",
+          "食人魚",
+          "土鮒",
+          "星鰻",
+          "黑鱸"
+        ]
+      },
+      {
+        "main": "香辛料",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "白蘿蔔",
     "使用器具": "鍋具",
     "價格": "",
@@ -1227,6 +3016,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1250,6 +3061,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1273,6 +3106,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蘋果",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1296,6 +3151,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蔔萄",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1319,6 +3196,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "柚子",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1342,6 +3241,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "巧克力",
+        "alternatives": []
+      },
+      {
+        "main": "蜜柑",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "鍋具",
     "價格": "",
@@ -1365,6 +3286,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "藍莓",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "鍋具",
     "價格": "",
@@ -1388,6 +3331,28 @@ export const recipes = [
     "材料 3": "白菜",
     "材料 4": "胡蘿蔔",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "褐帶石斑魚",
+        "alternatives": []
+      },
+      {
+        "main": "香菇",
+        "alternatives": []
+      },
+      {
+        "main": "白菜",
+        "alternatives": []
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "鍋具",
     "價格": "",
@@ -1411,6 +3376,35 @@ export const recipes = [
     "材料 3": "白菜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "帝王蟹",
+        "alternatives": []
+      },
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "白菜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "胡蘿蔔",
     "使用器具": "鍋具",
     "價格": "",
@@ -1434,6 +3428,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "龍蝦",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "鍋具",
     "價格": "",
@@ -1457,6 +3473,35 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "土鮒",
+        "alternatives": [
+          "土鮒",
+          "山女鱒",
+          "巨大紅點鮭",
+          "香魚",
+          "骨舌魚",
+          "石川櫻鱒"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "鍋具",
     "價格": "",
@@ -1480,6 +3525,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "草莓",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1503,6 +3570,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1526,6 +3615,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1549,6 +3660,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "櫻桃",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1572,6 +3705,43 @@ export const recipes = [
     "材料 3": "菠菜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "豌豆",
+        "alternatives": [
+          "豌豆",
+          "玉米"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "菠菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "花椰菜",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1595,6 +3765,40 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "草莓",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1618,6 +3822,28 @@ export const recipes = [
     "材料 3": "牛奶",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "栗子",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "地瓜",
     "使用器具": "打蛋器",
     "價格": "",
@@ -1641,6 +3867,28 @@ export const recipes = [
     "材料 3": "蜂蜜",
     "材料 4": "奶油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蘋果",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "烤箱",
     "價格": "",
@@ -1664,6 +3912,39 @@ export const recipes = [
     "材料 3": "麵粉",
     "材料 4": "起司",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": [
+          "白花椰菜",
+          "花椰菜"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "烤箱",
     "價格": "",
@@ -1687,6 +3968,32 @@ export const recipes = [
     "材料 3": "起司",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "白菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "馬鈴薯",
     "使用器具": "烤箱",
     "價格": "",
@@ -1710,6 +4017,43 @@ export const recipes = [
     "材料 3": "菠菜",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "南瓜",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "菠菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1733,6 +4077,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "地瓜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1756,6 +4122,28 @@ export const recipes = [
     "材料 3": "麵包",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "麵包",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1779,6 +4167,28 @@ export const recipes = [
     "材料 3": "牛奶",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "烤箱",
     "價格": "",
@@ -1802,6 +4212,28 @@ export const recipes = [
     "材料 3": "麵粉",
     "材料 4": "奶油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "杏仁",
+        "alternatives": []
+      },
+      {
+        "main": "蘋果",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蜂蜜",
     "使用器具": "烤箱",
     "價格": "",
@@ -1825,6 +4257,40 @@ export const recipes = [
     "材料 3": "麵粉",
     "材料 4": "雞蛋",
     "材料 5": "奶油",
+    "ingredients": [
+      {
+        "main": "杏子",
+        "alternatives": [
+          "草莓",
+          "枇杷",
+          "梅子",
+          "西瓜",
+          "哈密瓜",
+          "鳳梨",
+          "杏子",
+          "蘋果",
+          "蜜柑",
+          "柿子",
+          "葡萄"
+        ]
+      },
+      {
+        "main": "杏仁",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蜂蜜",
     "使用器具": "烤箱",
     "價格": "",
@@ -1848,6 +4314,41 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "山女鱒",
+        "alternatives": [
+          "山女鱒",
+          "巨大紅點鮭",
+          "香魚",
+          "骨舌魚",
+          "石川櫻鱒"
+        ]
+      },
+      {
+        "main": "滑菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1871,6 +4372,28 @@ export const recipes = [
     "材料 3": "海天使",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "皺鰓鯊",
+        "alternatives": []
+      },
+      {
+        "main": "燈籠魚",
+        "alternatives": []
+      },
+      {
+        "main": "海天使",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "烤箱",
     "價格": "",
@@ -1894,6 +4417,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "櫻桃",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "藍莓",
     "使用器具": "烤箱",
     "價格": "",
@@ -1917,6 +4462,28 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "牛奶",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "櫻桃",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蘋果",
     "使用器具": "烤箱",
     "價格": "",
@@ -1940,6 +4507,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "檸檬",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1963,6 +4552,28 @@ export const recipes = [
     "材料 3": "牛奶",
     "材料 4": "巧克力",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "巧克力",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -1986,6 +4597,28 @@ export const recipes = [
     "材料 3": "巧克力",
     "材料 4": "奶油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "巧克力",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "草莓",
     "使用器具": "烤箱",
     "價格": "",
@@ -2009,6 +4642,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "蔔萄",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -2032,6 +4687,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "牛奶",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "柚子醬",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蔔萄",
     "使用器具": "烤箱",
     "價格": "",
@@ -2055,6 +4732,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "藍莓",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "櫻桃",
     "使用器具": "烤箱",
     "價格": "",
@@ -2078,6 +4777,28 @@ export const recipes = [
     "材料 3": "起司",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "紅龍蝦",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "牛奶",
     "使用器具": "烤箱",
     "價格": "",
@@ -2101,6 +4822,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "秋刀魚",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "烤箱",
     "價格": "",
@@ -2124,6 +4867,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蛤蜊",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "烤箱",
     "價格": "",
@@ -2147,6 +4912,28 @@ export const recipes = [
     "材料 3": "柚子醬",
     "材料 4": "杏仁",
     "材料 5": "奶油",
+    "ingredients": [
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "蘋果醬",
+        "alternatives": []
+      },
+      {
+        "main": "柚子醬",
+        "alternatives": []
+      },
+      {
+        "main": "杏仁",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "葡萄醬",
     "使用器具": "烤箱",
     "價格": "",
@@ -2170,6 +4957,32 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "菠菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "薑",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2193,6 +5006,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2216,6 +5051,28 @@ export const recipes = [
     "材料 3": "起司",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2239,6 +5096,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2262,6 +5141,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "胡桃",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2285,6 +5186,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "艾草",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "牛奶",
     "使用器具": "擀麵棍",
     "價格": "",
@@ -2308,6 +5231,53 @@ export const recipes = [
     "材料 3": "胡蘿蔔",
     "材料 4": "青椒",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "高麗菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "青椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "菠菜",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2331,6 +5301,37 @@ export const recipes = [
     "材料 3": "筍子",
     "材料 4": "香菇",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "白菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "筍子",
+        "alternatives": []
+      },
+      {
+        "main": "香菇",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "青椒",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2354,6 +5355,44 @@ export const recipes = [
     "材料 3": "沙丁魚",
     "材料 4": "起司",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "沙丁魚",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2377,6 +5416,32 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "美乃滋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "高麗菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "起司",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2400,6 +5465,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "玉米",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "起司",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2423,6 +5510,28 @@ export const recipes = [
     "材料 3": "香辛料",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "杏仁",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "香辛料",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "蜂蜜",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2446,6 +5555,44 @@ export const recipes = [
     "材料 3": "胡蘿蔔",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "豌豆",
+        "alternatives": [
+          "豌豆",
+          "玉米"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2469,6 +5616,28 @@ export const recipes = [
     "材料 3": "蜂蜜",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "牛奶",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2492,6 +5661,36 @@ export const recipes = [
     "材料 3": "香辛料",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "蝦",
+        "alternatives": []
+      },
+      {
+        "main": "香辛料",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄醬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2515,6 +5714,34 @@ export const recipes = [
     "材料 3": "旗魚",
     "材料 4": "油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "馬鈴薯",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "地瓜",
+        "alternatives": [
+          "馬鈴薯",
+          "地瓜"
+        ]
+      },
+      {
+        "main": "旗魚",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2538,6 +5765,32 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "白菜",
+        "alternatives": [
+          "高麗菜",
+          "菠菜",
+          "白菜"
+        ]
+      },
+      {
+        "main": "螃蟹",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "洋蔥",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2561,6 +5814,40 @@ export const recipes = [
     "材料 3": "紫萁",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "問荊草",
+        "alternatives": [
+          "艾草",
+          "紫萁",
+          "問荊草",
+          "筍子",
+          "薺菜"
+        ]
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "紫萁",
+        "alternatives": [
+          "艾草",
+          "紫萁",
+          "問荊草",
+          "筍子",
+          "薺菜"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "豌豆",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2584,6 +5871,35 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "比目魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2607,6 +5923,50 @@ export const recipes = [
     "材料 3": "洋蔥",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "巨大紅點鮭",
+        "alternatives": [
+          "山女鱒",
+          "巨大紅點鮭",
+          "香魚",
+          "骨舌魚",
+          "石川櫻鱒"
+        ]
+      },
+      {
+        "main": "青椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "胡蘿蔔",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2630,6 +5990,48 @@ export const recipes = [
     "材料 3": "剝皮魚",
     "材料 4": "優格",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "胡蘿蔔",
+        "alternatives": [
+          "蕪菁",
+          "牛蒡",
+          "胡蘿蔔",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "剝皮魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "優格",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "甜椒",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2653,6 +6055,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "松露",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2676,6 +6100,46 @@ export const recipes = [
     "材料 3": "白帶魚",
     "材料 4": "香辛料",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "甜椒",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": [
+          "白花椰菜",
+          "花椰菜"
+        ]
+      },
+      {
+        "main": "白帶魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "香辛料",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2699,6 +6163,43 @@ export const recipes = [
     "材料 3": "洋蔥",
     "材料 4": "美乃滋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "巨骨蛇魚",
+        "alternatives": []
+      },
+      {
+        "main": "鱧魚",
+        "alternatives": [
+          "花鯰",
+          "鱧魚",
+          "食人魚",
+          "土鮒",
+          "星鰻",
+          "黑鱸"
+        ]
+      },
+      {
+        "main": "洋蔥",
+        "alternatives": [
+          "番茄",
+          "洋蔥",
+          "南瓜",
+          "甜椒",
+          "青椒",
+          "小黃瓜",
+          "茄子"
+        ]
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄醬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2722,6 +6223,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "櫻桃",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "雞蛋",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2745,6 +6268,28 @@ export const recipes = [
     "材料 3": "奶油",
     "材料 4": "雞蛋",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "檸檬",
+        "alternatives": []
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "杏仁",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2768,6 +6313,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "可可",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "杏仁",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2791,6 +6358,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "淡菜",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "起司",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2814,6 +6403,38 @@ export const recipes = [
     "材料 3": "番茄",
     "材料 4": "蝦",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "義大利麵",
+        "alternatives": []
+      },
+      {
+        "main": "淡菜",
+        "alternatives": [
+          "帆立貝",
+          "花蛤",
+          "海帶",
+          "淡菜",
+          "蛤蜊",
+          "蠑螺"
+        ]
+      },
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "蝦",
+        "alternatives": [
+          "小龍蝦",
+          "蝦"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香菇",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2837,6 +6458,35 @@ export const recipes = [
     "材料 3": "油",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "花蛤",
+        "alternatives": []
+      },
+      {
+        "main": "香菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "菠菜",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2860,6 +6510,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "星鰻",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2883,6 +6555,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蠑螺",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2906,6 +6600,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "帆立貝",
+        "alternatives": []
+      },
+      {
+        "main": "奶油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2929,6 +6645,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "起司",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "奶油",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2952,6 +6690,35 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "義大利麵",
+        "alternatives": []
+      },
+      {
+        "main": "舞菇",
+        "alternatives": [
+          "香菇",
+          "滑菇",
+          "舞菇",
+          "木耳",
+          "松茸",
+          "松露"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "菠菜",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2975,6 +6742,28 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "義大利麵",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "鮭魚",
     "使用器具": "平底鍋",
     "價格": "",
@@ -2998,6 +6787,35 @@ export const recipes = [
     "材料 3": "",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "秋刀魚",
+        "alternatives": [
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3021,6 +6839,28 @@ export const recipes = [
     "材料 3": "牛奶",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "義大利麵",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "起司",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3044,6 +6884,38 @@ export const recipes = [
     "材料 3": "雞蛋",
     "材料 4": "油",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "沙腸仔",
+        "alternatives": [
+          "沙腸仔",
+          "西太公魚",
+          "稻田魚",
+          "鯛魚",
+          "剝皮魚",
+          "白帶魚",
+          "鱸魚",
+          "比目魚",
+          "秋刀魚"
+        ]
+      },
+      {
+        "main": "麵粉",
+        "alternatives": []
+      },
+      {
+        "main": "雞蛋",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "番茄醬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3067,6 +6939,34 @@ export const recipes = [
     "材料 3": "青椒",
     "材料 4": "番茄",
     "材料 5": "油",
+    "ingredients": [
+      {
+        "main": "山女鱒",
+        "alternatives": [
+          "山女鱒",
+          "巨大紅點鮭",
+          "香魚",
+          "骨舌魚",
+          "石川櫻鱒"
+        ]
+      },
+      {
+        "main": "番茄醬",
+        "alternatives": []
+      },
+      {
+        "main": "青椒",
+        "alternatives": []
+      },
+      {
+        "main": "番茄",
+        "alternatives": []
+      },
+      {
+        "main": "油",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3090,6 +6990,28 @@ export const recipes = [
     "材料 3": "番茄醬",
     "材料 4": "牛奶",
     "材料 5": "蜂蜜",
+    "ingredients": [
+      {
+        "main": "蝦",
+        "alternatives": []
+      },
+      {
+        "main": "美乃滋",
+        "alternatives": []
+      },
+      {
+        "main": "番茄醬",
+        "alternatives": []
+      },
+      {
+        "main": "牛奶",
+        "alternatives": []
+      },
+      {
+        "main": "蜂蜜",
+        "alternatives": []
+      }
+    ],
     "食譜+": "檸檬",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3113,6 +7035,45 @@ export const recipes = [
     "材料 3": "帆立貝",
     "材料 4": "",
     "材料 5": "",
+    "ingredients": [
+      {
+        "main": "蝦",
+        "alternatives": [
+          "小龍蝦",
+          "蝦",
+          "龍蝦",
+          "紅龍蝦"
+        ]
+      },
+      {
+        "main": "鮭魚",
+        "alternatives": [
+          "鮭魚",
+          "虹鱒",
+          "油錐",
+          "褐帶石斑魚"
+        ]
+      },
+      {
+        "main": "帆立貝",
+        "alternatives": [
+          "帆立貝",
+          "花蛤",
+          "海帶",
+          "淡菜",
+          "蛤蜊",
+          "蠑螺"
+        ]
+      },
+      {
+        "main": "",
+        "alternatives": []
+      },
+      {
+        "main": "",
+        "alternatives": []
+      }
+    ],
     "食譜+": "香辛料",
     "使用器具": "平底鍋",
     "價格": "",
@@ -3136,6 +7097,41 @@ export const recipes = [
     "材料 3": "淡菜",
     "材料 4": "玉米",
     "材料 5": "花椰菜",
+    "ingredients": [
+      {
+        "main": "紅龍蝦",
+        "alternatives": []
+      },
+      {
+        "main": "帝王蟹",
+        "alternatives": []
+      },
+      {
+        "main": "淡菜",
+        "alternatives": [
+          "帆立貝",
+          "花蛤",
+          "海帶",
+          "淡菜",
+          "蛤蜊",
+          "蠑螺"
+        ]
+      },
+      {
+        "main": "玉米",
+        "alternatives": [
+          "豌豆",
+          "玉米"
+        ]
+      },
+      {
+        "main": "花椰菜",
+        "alternatives": [
+          "白花椰菜",
+          "花椰菜"
+        ]
+      }
+    ],
     "食譜+": "帆立貝",
     "使用器具": "平底鍋",
     "價格": "",
