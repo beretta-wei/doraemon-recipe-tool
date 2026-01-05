@@ -2,6 +2,7 @@ import { ingredients } from "./data/ingredients.js";
 import { recipes } from "./data/recipes.js";
 import { getCategoryHref } from "./logic/categories.js";
 import { renderAppShell } from "./ui/appShell.js";
+import { attachBackToTopButton } from "./ui/backToTop.js";
 import { renderIngredientsView } from "./ui/ingredientsView.js";
 import { renderTabsNavigation } from "./ui/navigation.js";
 import { renderRecipesView } from "./ui/recipesView.js";
@@ -45,6 +46,11 @@ if (root) {
     } else {
       renderRecipesView(panel, recipes);
     }
+  }
+
+  const tabs = root.querySelector("[data-tabs]");
+  if (tabs && panel) {
+    attachBackToTopButton(tabs, document.scrollingElement);
   }
 
   const categoryLinks = root.querySelectorAll(".tabs__tab");
